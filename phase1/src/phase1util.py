@@ -48,11 +48,12 @@ def calTagWeight(docs_dict, docid, attribute_str):
 def normalize_tag_weight(tag_list):
     values = tag_list.values()
     values_sum = sum(values)
+    max_value = sum(values)
     if values_sum == 0:
         print("values_sum is 0, tag_list length is {}, tag_list is {}".format(len(tag_list), tag_list))
         return []
     for tag_id in tag_list.keys():
-        tag_list[tag_id] = tag_list[tag_id]  / values_sum
+        tag_list[tag_id] = tag_list[tag_id]  / max_value
     return tag_list
 
 def timeToNumber(time_str):
@@ -203,6 +204,7 @@ def prepForIDF(doc_tag_dict):
     return tags, documents
 
 def computeIFIDF(tags,tag_weight_dict, idf_dict ):
+    idf_dict = normalize_tag_weight(idf_dict)
     userTagifidf = {}
     tag_idf_dict = {}
     for tag_id in tags:
@@ -311,6 +313,40 @@ def getDocTagsById(doc_tag_dict, docid):
 
 def print_result(model, docname, docid, tag_name_dict, res):
     print("{}_id : {}, model : {}, format : <tag_id, tag_name, weight>".format(docname, docid, model))
+    rowformat = "{:>25}"
+    tableformat = rowformat+rowformat+rowformat
+    print()
+    print(tableformat.format('tag_id', 'tag_name', 'weight'))
     res = convertDictToList(res, tag_name_dict)
     for tup in res:
-        print("{},{},{}".format(tup[0], tup[1], tup[2]))
+        print(tableformat.format(tup[0], tup[1], tup[2]))
+    print()
+
+
+def calDocTagTF(doc_tag_dict, docid, isactor = False):
+    tag_weight_TS_dict = calTagWeight(doc_tag_dict, docid, 'timestamp')
+    if isactor:
+        tag_weight_rank_dict =calTagWeight(doc_tag_dict, docid, 'actor_movie_rank')
+        actor_tag_tf_dict = {}
+        for tagid in tag_weight_TS_dict.keys():
+            actor_tag_tf_dict[tagid] = tag_weight_TS_dict[tagid] + tag_weight_rank_dict[tagid]
+        return normalize_tag_weight(actor_tag_tf_dict)
+    return normalize_tag_weight(tag_weight_TS_dict)
+
+def calDocTFIDF(doc_tag_dict, docid, docname, movie = False):
+    tag_weight_dict = calDocTagTF(doc_tag_dict, docid)
+    tags = getDocTagsById(doc_tag_dict, docid)
+    if movie:
+        doc_tag_idf = calDocFullIDF(doc_tag_dict, docname)
+    else:
+        doc_tag_idf = calDocFullIDF(doc_tag_dict, docname)
+    return computeIFIDF(tags,tag_weight_dict, doc_tag_idf )
+
+def calDocTFIDF(doc_tag_dict, docid, docname, movie = False, movie_tag_dict = None):
+    tag_weight_dict = calDocTagTF(doc_tag_dict, docid)
+    tags = getDocTagsById(doc_tag_dict, docid)
+    if movie:
+        doc_tag_idf = calDocFullIDF(movie_tag_dict, docname)
+    else:
+        doc_tag_idf = calDocFullIDF(doc_tag_dict, docname)
+    return computeIFIDF(tags,tag_weight_dict, doc_tag_idf )

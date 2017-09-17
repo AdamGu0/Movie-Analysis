@@ -3,25 +3,20 @@ import pandas as pd
 from pathlib import Path
 import numpy as np
 
-movie_actor = pd.read_csv("phase1_dataset/movie-actor.csv")
-genome_tags = pd.read_csv("phase1_dataset/genome-tags.csv")
-mltags = pd.read_csv("phase1_dataset/mltags.csv")
-tag_name_dict = putil.buildTagNameDict(genome_tags)
 
-
-def calActorTagTF(actor_tag_dict, actorid):
-    tag_weight_TS_dict = putil.calTagWeight(actor_tag_dict, actorid, 'timestamp')
-    tag_weight_rank_dict = putil.calTagWeight(actor_tag_dict, actorid, 'actor_movie_rank')
-    actor_tag_tf_dict = {}
-    for tagid in tag_weight_TS_dict.keys():
-        actor_tag_tf_dict[tagid] = tag_weight_TS_dict[tagid] + tag_weight_rank_dict[tagid]
-    return putil.normalize_tag_weight(actor_tag_tf_dict)
-
-def calActorTFIDF(actor_tag_dict, actorid):
-    tag_weight_dict = calActorTagTF(actor_tag_dict, actorid)
-    tags = putil.getDocTagsById(actor_tag_dict, actorid)
-    actor_tag_idf = putil.calDocFullIDF(actor_tag_dict, 'actor')
-    return putil.computeIFIDF(tags,tag_weight_dict, actor_tag_idf )
+# def calActorTagTF(actor_tag_dict, actorid):
+#     tag_weight_TS_dict = putil.calTagWeight(actor_tag_dict, actorid, 'timestamp')
+#     tag_weight_rank_dict = putil.calTagWeight(actor_tag_dict, actorid, 'actor_movie_rank')
+#     actor_tag_tf_dict = {}
+#     for tagid in tag_weight_TS_dict.keys():
+#         actor_tag_tf_dict[tagid] = tag_weight_TS_dict[tagid] + tag_weight_rank_dict[tagid]
+#     return putil.normalize_tag_weight(actor_tag_tf_dict)
+#
+# def calActorTFIDF(actor_tag_dict, actorid):
+#     tag_weight_dict = calActorTagTF(actor_tag_dict, actorid)
+#     tags = putil.getDocTagsById(actor_tag_dict, actorid)
+#     actor_tag_idf = putil.calDocFullIDF(actor_tag_dict, 'actor')
+#     return putil.computeIFIDF(tags,tag_weight_dict, actor_tag_idf )
 
 # #return actor_tag_idf{tagid:idf}   all the tags appear in all the actors
 # def calActorFullIDF(actor_tag_dict):
@@ -48,9 +43,9 @@ def printActor(movie_actor, mltags,  tag_name_dict, actorid,model):
 
     res = {}
     if model == 'TF':
-        res = calActorTagTF(actor_tag_dict, actorid)
+        res = putil.calDocTagTF(actor_tag_dict, actorid, isactor = True)
     else:
-        res = calActorTFIDF(actor_tag_dict, actorid)
+        res = putil.calDocTFIDF(actor_tag_dict, actorid, 'actor')
     putil.print_result(model, 'actor', actorid, tag_name_dict, res)
 
 
@@ -70,5 +65,5 @@ def prepareData(movie_actor, mltags):
         np.save('out/actor_tag_dict.npy', actor_tag_dict)
     return actor_tag_dict
 
-printActor(movie_actor, mltags,  tag_name_dict,1484 ,"TF-IDF")
-printActor(movie_actor, mltags,  tag_name_dict,1484 ,"TF")
+# printActor(movie_actor, mltags,  tag_name_dict,1484 ,"TF-IDF")
+# printActor(movie_actor, mltags,  tag_name_dict,1484 ,"TF")

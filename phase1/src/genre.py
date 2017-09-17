@@ -3,34 +3,29 @@ import pandas as pd
 from pathlib import Path
 import numpy as np
 import math
-genres_movie = pd.read_csv("phase1_dataset/mlmovies.csv")
-mltags = pd.read_csv("phase1_dataset/mltags.csv")
-genome_tags = pd.read_csv("phase1_dataset/genome-tags.csv")
-tag_name_dict = putil.buildTagNameDict(genome_tags)
 
-
-def calGenreTagTF(genre_tag_dict, genreid):
-    tag_weight_TS_dict = putil.calTagWeight(genre_tag_dict, genreid, 'timestamp')
-    return putil.normalize_tag_weight(tag_weight_TS_dict)
-
-def calGenreTFIDF(genre_tag_dict, genreid):
-    tag_weight_dict = calGenreTagTF(genre_tag_dict, genreid)
-    tags = putil.getDocTagsById(genre_tag_dict, genreid)
-    genre_tag_idf = putil.calDocFullIDF(genre_tag_dict, 'genre')
-    return putil.computeIFIDF(tags,tag_weight_dict, genre_tag_idf )
+# def calGenreTagTF(genre_tag_dict, genreid):
+#     tag_weight_TS_dict = putil.calTagWeight(genre_tag_dict, genreid, 'timestamp')
+#     return putil.normalize_tag_weight(tag_weight_TS_dict)
+#
+# def calGenreTFIDF(genre_tag_dict, genreid):
+#     tag_weight_dict = calGenreTagTF(genre_tag_dict, genreid)
+#     tags = putil.getDocTagsById(genre_tag_dict, genreid)
+#     genre_tag_idf = putil.calDocFullIDF(genre_tag_dict, 'genre')
+#     return putil.computeIFIDF(tags,tag_weight_dict, genre_tag_idf )
 
 def printGenre(genres_movie, mltags,  tag_name_dict, genreid,model):
     genre_tag_dict = prepareData(genres_movie, mltags)
     res = {}
     if model == 'TF':
-        res = calGenreTagTF(genre_tag_dict, genreid)
+        res = putil.calDocTagTF(genre_tag_dict, genreid)
     else:
-        res = calGenreTFIDF(genre_tag_dict, genreid)
+        res = putil.calDocTFIDF(genre_tag_dict, genreid, 'genre')
     putil.print_result(model, 'genre', genreid, tag_name_dict, res)
 
 #return actor_tag_dict = {actorid:[{"tagid":, "timestamp":}}
 def prepareData(genres_movie, mltags):
-    outter_join = genres_movie.set_index("movieid").join(mltags.set_index("movieid"), how="outer")
+    outter_join = genres_movie.join(mltags.set_index("movieid"), how="outer", on='movieid')
     outter_join = outter_join.drop('userid', 1)
     outter_join = outter_join.drop('moviename', 1)
     outter_join.to_csv("out/genresoutterjoin.csv", index=False, encoding='utf-8')
@@ -80,5 +75,5 @@ def findAllGenres(genres_movie):
             genre_cnt_dict[genre] += 1
     return genre_cnt_dict
 
-printGenre(genres_movie, mltags,  tag_name_dict,'Horror' ,"TF-IDF")
-printGenre(genres_movie, mltags,  tag_name_dict,'Horror' ,"TF")
+# printGenre(genres_movie, mltags,  tag_name_dict,'Horror' ,"TF-IDF")
+# printGenre(genres_movie, mltags,  tag_name_dict,'Horror' ,"TF")

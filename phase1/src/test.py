@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
+import sys
+print(sys.argv)
 import math
 movie_actor = pd.read_csv("phase1_dataset/movie-actor.csv");
 genome_tags = pd.read_csv("phase1_dataset/genome-tags.csv");

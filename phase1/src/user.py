@@ -3,34 +3,20 @@ import pandas as pd
 from pathlib import Path
 import numpy as np
 import math
-genome_tags = pd.read_csv("phase1_dataset/genome-tags.csv")
-mltags = pd.read_csv("phase1_dataset/mltags.csv")
-mlratings = pd.read_csv("phase1_dataset/mlratings.csv")
-tag_name_dict = putil.buildTagNameDict(genome_tags)
-
-def calUserTagTF(user_tag_dict, userid):
-    tag_weight_TS_dict = putil.calTagWeight(user_tag_dict, userid, 'timestamp')
-    return putil.normalize_tag_weight(tag_weight_TS_dict)
-
-def calUserTFIDF(user_tag_dict, userid):
-    tag_weight_dict = calUserTagTF(user_tag_dict, userid)
-    tags = putil.getDocTagsById(user_tag_dict, userid)
-    user_tag_idf = putil.calDocFullIDF(user_tag_dict, 'user')
-    return putil.computeIFIDF(tags,tag_weight_dict, user_tag_idf )
 
 def printUser(mlratings, mltags, tag_name_dict, userid, model):
     user_tag_dict = prepareData(mlratings, mltags)
     res = {}
     if model == 'TF':
-        res = calUserTagTF(user_tag_dict, userid)
+        res = putil.calDocTagTF(user_tag_dict, userid)
     else:
-        res = calUserTFIDF(user_tag_dict, userid)
+        res = putil.calDocTFIDF(user_tag_dict, userid, 'user')
     putil.print_result(model, 'user', userid, tag_name_dict, res)
 
 
 # return actor_tag_dict = {actorid:[{"actor_movie_rank":, "tagid":, "timestamp":}}
 def prepareData(mlratings, mltags):
-    mltags = mltags.drop('movieid', 1)
+    #mltags = mltags.drop('movieid', 1)
     # print(outter_join['actorid'][0])
     user_tag_dict_file = Path("out/user_tag_dict.npy")
     user_tag_dict = {}
@@ -47,8 +33,10 @@ def mergeusers(mlratings, user_tag_dict):
     for user_id in rating_user_dict.keys():
         if not user_id in user_tag_dict.keys():
             user_tag_dict[user_id] = []
-            user_tag_dict[user_id].append({'tagid':math.nan, 'timestamp':math.nan})
+        for movieid in rating_user_dict[user_id]:
+            user_tag_dict[user_id].append({'movieid':movieid, 'tagid':math.nan, 'timestamp':math.nan})
     return user_tag_dict
+
 def get_mlrating_user(mlratings):
     user_dict = {}
     for index in range(0, len(mlratings.userid)):
@@ -56,12 +44,12 @@ def get_mlrating_user(mlratings):
             print(index)
         userid = mlratings.userid[index]
         if not userid in user_dict:
-            user_dict[userid] = 0
-        user_dict[userid] += 1
+            user_dict[userid] = []
+        user_dict[userid].append(mlratings.movieid[index])
     return user_dict
 
-printUser(mlratings, mltags, tag_name_dict, 146, 'TF')
-printUser(mlratings, mltags, tag_name_dict, 146, 'TF-IDF')
+# printUser(mlratings, mltags, tag_name_dict, 146, 'TF')
+# printUser(mlratings, mltags, tag_name_dict, 146, 'TF-IDF')
 
 #
 # #input  userid_dict    {index : user_id}
