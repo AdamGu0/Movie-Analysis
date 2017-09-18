@@ -1,0 +1,391 @@
+actor_id : 1484, model : TF-IDF
+, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                      998                 survival      0.41677855711711914
+                      673        mountain climbing      0.27442745892898673
+                      852               ridiculous      0.10898882810014357
+                      883                   scenic      0.09917557445844806
+                      312               disturbing      0.09068321755185776
+                     1059                   unique      0.00994636384344459
+                     1047               true story    5.701721125108135e-18
+
+actor_id : 1484, model : TF
+, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                      998                 survival      0.41677855711711914
+                      673        mountain climbing      0.27442745892898673
+                      852               ridiculous      0.10898882810014357
+                      883                   scenic      0.09917557445844806
+                      312               disturbing      0.09068321755185776
+                     1059                   unique      0.00994636384344459
+                     1047               true story    5.701721125108135e-18
+
+genre_id : Western, model : TF
+, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                      178                   canada       0.2932757726712511
+                     1007          talking animals       0.2159043379324899
+                      277            culture clash      0.14502867356540064
+                      523                   horses        0.143562987203365
+                      327               dreamworks      0.10044061924617971
+                      310  disney animated feature      0.09566904433935668
+                      309                   disney     0.006054988320263475
+                      509                  history    6.357672169344966e-05
+                      649              middle east   1.4235223005488745e-17
+
+genre_id : Western, model : TF-IDF
+, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                      178                   canada       0.2932757726712511
+                     1007          talking animals       0.2159043379324899
+                      277            culture clash      0.14502867356540064
+                      523                   horses        0.143562987203365
+                      327               dreamworks      0.10044061924617971
+                      310  disney animated feature      0.09566904433935668
+                      309                   disney     0.006054988320263475
+                      509                  history    6.357672169344966e-05
+                      649              middle east   1.4235223005488745e-17
+
+user_id : 146, model : TF
+, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                      305        directorial debut      0.13596907952152928
+                      107          based on a book      0.08227325676595466
+                      507                  hip hop       0.0534378197443812
+                      901                   sequel      0.04961258743886336
+                     1047               true story      0.03876007678123345
+                      141             black comedy     0.036715483693957704
+                      132               big budget      0.03131088574702739
+                      537               immigrants      0.02918434941694308
+                      728    nudity (full frontal)     0.027090494345926024
+                      770                   parody      0.02438428290627575
+                      227                  college      0.02180636045559579
+                      134                biography     0.020358889587471694
+                      645           mental illness      0.02030507851226238
+                      556      interracial romance     0.015536677206009418
+                     1039                   trains     0.015508931532578176
+                       66               antarctica     0.015472910940792848
+                      109          based on a play      0.01509378735162514
+                      566               irreverent      0.01501752926141026
+                     1007          talking animals      0.01462220084954583
+                      354            ensemble cast     0.014621964698002981
+                      572                    italy     0.014517974280596516
+                      883                   scenic     0.013883508952508873
+                      140          black and white      0.01347618605745309
+                      178                   canada     0.013297880294469759
+                      855                road trip     0.013011358873773964
+                      959                   sports     0.012535852030618553
+                      705            new york city     0.012438226396373032
+                      623                    magic     0.011758364539149673
+                      877                   satire     0.011604013109141696
+                      847                 religion     0.011527539029179445
+                     1050             twist ending     0.011519987133747047
+                      849                   remake     0.010755190986291586
+                      995                  surreal     0.010156811711749628
+                      484                  hackers      0.00784396498956747
+                      801              pornography     0.007837987523207591
+                      248                  con men     0.007837377958819525
+                      688                  mutants     0.007827801222845253
+                      568                   island     0.007774178432215757
+                      161                   brazil     0.007770519801403983
+                      914                    shark     0.007768429464591888
+                      888                  science     0.007307650836697038
+                      197             cheerleading     0.007304219856090158
+                      911                     sexy     0.007112592576295499
+                      111       based on a tv show     0.007003352657011244
+                      562                  ireland      0.00699559009724789
+                      406                franchise      0.00699353381985657
+                      983                submarine     0.006944361598754724
+                      813                   prison     0.006941761405892243
+                      842               reality tv     0.006783453034404812
+                      942                    space     0.006658290476142721
+                      861                   robots     0.006552467221120896
+                      582               journalism    0.0064703347111757055
+                     1075    video game adaptation    0.0063019699984799065
+                      989                superhero    0.0059536774520201705
+                      331                    drugs     0.005835925808866037
+                      503              high school     0.005782932329422481
+                      210                christmas    0.0006635148619545549
+                      159                   boxing   0.00016857075783554166
+                      903            serial killer     9.55641170776504e-10
+
+user_id : 146, model : TF-IDF
+, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                      305        directorial debut      0.13596907952152928
+                      107          based on a book      0.08227325676595466
+                      507                  hip hop       0.0534378197443812
+                      901                   sequel      0.04961258743886336
+                     1047               true story      0.03876007678123345
+                      141             black comedy     0.036715483693957704
+                      132               big budget      0.03131088574702739
+                      537               immigrants      0.02918434941694308
+                      728    nudity (full frontal)     0.027090494345926024
+                      770                   parody      0.02438428290627575
+                      227                  college      0.02180636045559579
+                      134                biography     0.020358889587471694
+                      645           mental illness      0.02030507851226238
+                      556      interracial romance     0.015536677206009418
+                     1039                   trains     0.015508931532578176
+                       66               antarctica     0.015472910940792848
+                      109          based on a play      0.01509378735162514
+                      566               irreverent      0.01501752926141026
+                     1007          talking animals      0.01462220084954583
+                      354            ensemble cast     0.014621964698002981
+                      572                    italy     0.014517974280596516
+                      883                   scenic     0.013883508952508873
+                      140          black and white      0.01347618605745309
+                      178                   canada     0.013297880294469759
+                      855                road trip     0.013011358873773964
+                      959                   sports     0.012535852030618553
+                      705            new york city     0.012438226396373032
+                      623                    magic     0.011758364539149673
+                      877                   satire     0.011604013109141696
+                      847                 religion     0.011527539029179445
+                     1050             twist ending     0.011519987133747047
+                      849                   remake     0.010755190986291586
+                      995                  surreal     0.010156811711749628
+                      484                  hackers      0.00784396498956747
+                      801              pornography     0.007837987523207591
+                      248                  con men     0.007837377958819525
+                      688                  mutants     0.007827801222845253
+                      568                   island     0.007774178432215757
+                      161                   brazil     0.007770519801403983
+                      914                    shark     0.007768429464591888
+                      888                  science     0.007307650836697038
+                      197             cheerleading     0.007304219856090158
+                      911                     sexy     0.007112592576295499
+                      111       based on a tv show     0.007003352657011244
+                      562                  ireland      0.00699559009724789
+                      406                franchise      0.00699353381985657
+                      983                submarine     0.006944361598754724
+                      813                   prison     0.006941761405892243
+                      842               reality tv     0.006783453034404812
+                      942                    space     0.006658290476142721
+                      861                   robots     0.006552467221120896
+                      582               journalism    0.0064703347111757055
+                     1075    video game adaptation    0.0063019699984799065
+                      989                superhero    0.0059536774520201705
+                      331                    drugs     0.005835925808866037
+                      503              high school     0.005782932329422481
+                      210                christmas    0.0006635148619545549
+                      159                   boxing   0.00016857075783554166
+                      903            serial killer     9.55641170776504e-10
+
+genre_diff_id : Thriller, model : P-DIFF2, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                      460                   gothic       3.2075168771981817
+                     1128                  zombies       3.2075168771981817
+                     1067                  vampire       3.1470958953830723
+                     1069                 vampires       3.1470958953830723
+                     1127                   zombie        3.086265211955756
+                      406                franchise        3.069354662987416
+                      554              interesting         3.04822628229236
+                      901                   sequel         3.04822628229236
+                      770                   parody         3.04822628229236
+                      180              cannibalism       3.0250257807564727
+                      927                  slasher       3.0250257807564727
+                      505                hilarious       3.0250257807564727
+                      792                pointless       3.0250257807564727
+                      978                   stupid       3.0250257807564727
+                      522                   horror       3.0101837390872555
+                      903            serial killer        2.991598792198324
+                       86              atmospheric       2.9878232452122346
+                      232               comic book       2.9878232452122346
+                     1025                 thriller       2.9878232452122346
+                      230                   comedy       2.9878232452122346
+                      719                not funny       2.9878232452122346
+                      729            nudity (rear)       2.9878232452122346
+                      644          mental hospital       2.9633792124972858
+                       89        author:alan moore       2.9633792124972858
+                      234                   comics       2.9633792124972858
+                      456                     gore       2.9633792124972858
+                      926                slapstick       2.9633792124972858
+                      267                   creepy       2.9633792124972858
+                     1099            waste of time       2.9633792124972858
+                      807              predictable       2.9633792124972858
+                      256                    corny       2.9633792124972858
+                       66               antarctica       2.9633792124972858
+                       43                    alien       2.9633792124972858
+                      875                    sappy       2.9633792124972858
+                      307            disappointing       2.9633792124972858
+                     1088                    virus       2.9633792124972858
+                      218           claustrophobic       2.9633792124972858
+                      458                     gory       2.9633792124972858
+                     1058    unintentionally funny       2.9633792124972858
+                      469              great movie       2.9633792124972858
+                      632                   marvel       2.9633792124972858
+                      824               psychology       2.9527149744746812
+                      489          hannibal lecter        2.927019422408592
+                      608                   london        2.927019422408592
+                       44           alien invasion        2.927019422408592
+                      994          surprise ending        2.927019422408592
+                       24        adapted from:game        2.927019422408592
+                     1075    video game adaptation        2.927019422408592
+                     1054               underrated        2.927019422408592
+                      425                      gay        2.927019422408592
+                      285                     dark        2.927019422408592
+                      164                  british        2.927019422408592
+                     1085                  violent       2.9134068906153625
+                      155                   boring        2.896032869858609
+                      689                  mystery       2.8906558355105414
+                      652                 mindfuck       2.8906558355105414
+                      334       dynamic cgi action       2.8906558355105414
+                      849                   remake       2.8761927504085563
+                      428                    geeks        2.865817019173987
+                      746       oscar (best actor)        2.865817019173987
+                      720           notable nudity        2.865817019173987
+                     1013                     teen        2.865817019173987
+                      645           mental illness        2.865817019173987
+                      974                  strange        2.865817019173987
+                      211                      cia        2.865817019173987
+                      361                espionage        2.865817019173987
+                      464                    great        2.865817019173987
+                     1114                    witty        2.865817019173987
+                      181                    caper        2.865817019173987
+                      595                las vegas        2.865817019173987
+                      187                   casino        2.865817019173987
+                     1104                    weird        2.865817019173987
+                      377                  fantasy        2.865817019173987
+                      109          based on a play        2.865817019173987
+                       88               australian        2.865817019173987
+                     1022                terrorism        2.865817019173987
+                      261                    court        2.865817019173987
+                      847                 religion        2.865817019173987
+                      385  father-son relationship        2.865817019173987
+                      691                 narrated        2.865817019173987
+                      988               super-hero        2.865817019173987
+                      705            new york city        2.865817019173987
+                      989                superhero        2.865817019173987
+                      951          special effects        2.865817019173987
+                      704                 new york        2.865817019173987
+                       49                alter ego        2.865817019173987
+                      987               super hero        2.865817019173987
+                      201              chick flick        2.865817019173987
+                      911                     sexy        2.865817019173987
+                      300                detective        2.865817019173987
+                     1024        thought-provoking        2.865817019173987
+                      605      literary adaptation        2.865817019173987
+                      983                submarine        2.865817019173987
+                       45                   aliens        2.865817019173987
+                      344                    eerie        2.865817019173987
+                      639               meditative        2.865817019173987
+                      782              photography        2.865817019173987
+                      999                 suspense        2.865817019173987
+                      139                  bizarre        2.865817019173987
+                      587               kidnapping        2.865817019173987
+                      144                blindness        2.865817019173987
+                      863                  romance        2.865817019173987
+                      151                     bond        2.865817019173987
+                      573               james bond        2.865817019173987
+                      304                dinosaurs        2.865817019173987
+                     1034                  torture        2.865817019173987
+                       54   amazing cinematography        2.865817019173987
+                      380                  fascism        2.865817019173987
+                      276                cult film        2.865817019173987
+                      942                    space        2.865817019173987
+                      964                star trek        2.865817019173987
+                      475                   gritty        2.865817019173987
+                     1089                 visceral        2.865817019173987
+                     1096                      war        2.865817019173987
+                      283                    dance        2.865817019173987
+                      248                  con men        2.865817019173987
+                      789               plot twist        2.865817019173987
+                       25                addiction        2.865817019173987
+                      421                 gambling        2.865817019173987
+                      672               motorcycle        2.865817019173987
+                      788               plot holes        2.865817019173987
+                      537               immigrants        2.865817019173987
+                      245            computer game        2.865817019173987
+                      795                   police        2.865817019173987
+                     1073         very interesting        2.865817019173987
+                      801              pornography        2.865817019173987
+                       13                      80s        2.865817019173987
+                      145                    blood        2.865817019173987
+                      910      sexualized violence        2.865817019173987
+                      263          courtroom drama        2.865817019173987
+                      262                courtroom        2.865817019173987
+                      562                  ireland        2.865817019173987
+                      212           cinematography        2.865817019173987
+                      747     oscar (best actress)        2.865817019173987
+                      134                biography        2.865817019173987
+                      884            schizophrenia        2.865817019173987
+                      534         imaginary friend        2.865817019173987
+                       80                    artsy        2.865817019173987
+                      798                political        2.865817019173987
+                      793                    poker        2.865817019173987
+                      946        spaghetti western        2.865817019173987
+                      634              masterpiece        2.865817019173987
+                      146                   bloody        2.865817019173987
+                     1107                  western        2.865817019173987
+                      466     great cinematography        2.865817019173987
+                      417                    funny        2.865817019173987
+                      861                   robots        2.865817019173987
+                       77  artificial intelligence        2.865817019173987
+                      886                   sci fi        2.865817019173987
+                      153          book was better        2.865817019173987
+                      420               futuristic        2.865817019173987
+                      612              los angeles        2.865817019173987
+                      767                 paranoid        2.865817019173987
+                      888                  science        2.865817019173987
+                      242              complicated        2.865817019173987
+                      220                   clever        2.865817019173987
+                      550             intellectual        2.865817019173987
+                      776                       pg        2.865817019173987
+                     1043                 treasure        2.865817019173987
+                      471         great soundtrack        2.865817019173987
+                      857                  robbery        2.865817019173987
+                      718 not as good as the first        2.865817019173987
+                      103               bad sequel        2.865817019173987
+                      914                    shark        2.865817019173987
+                     1059                   unique        2.865817019173987
+                      980                stupidity        2.865817019173987
+                      440                     glbt        2.865817019173987
+                      809                prejudice        2.865817019173987
+                      515                holocaust        2.865817019173987
+                      732         nudity (topless)       2.8579742687825447
+                      682                   murder        2.854288291265135
+                     1050             twist ending        2.854288291265135
+                      354            ensemble cast        2.830302321162765
+                      498                    heist        2.830302321162765
+                      777                    pg-13        2.830302321162765
+                      778           philip k. dick        2.830302321162765
+                      419                   future        2.830302321162765
+                      336                 dystopia        2.830302321162765
+                      882                    scary        2.830302321162765
+                      852               ridiculous        2.830302321162765
+                      111       based on a tv show        2.830302321162765
+                      445                     good        2.830302321162765
+                       97               bad acting        2.830302321162765
+                     1009                tarantino        2.830302321162765
+                      982                 stylized        2.830302321162765
+                      631             martial arts        2.830302321162765
+                      575                    japan        2.830302321162765
+                      312               disturbing        2.830302321162765
+                      730 nudity (topless - brief)        2.817916619982503
+                      305        directorial debut        2.817916619982503
+                     1047               true story        2.794783582793338
+                     1028              time travel        2.794783582793338
+                      995                  surreal        2.794783582793338
+                      829                   quirky        2.794783582793338
+                      536             imdb top 250        2.794783582793338
+                      268                    crime        2.794783582793338
+                     1084                 violence        2.794783582793338
+                      339easily confused with other movie(s) (title)        2.794783582793338
+                      331                    drugs        2.794783582793338
+                      763                overrated        2.794783582793338
+                      323                    drama        2.794783582793338
+                      731nudity (topless - notable)       2.7815406421611937
+                      107          based on a book        2.759260630002679
+                       19                   action       2.7437708708311357
+                      727nudity (full frontal - notable)       2.7237332786192967
+                      887                   sci-fi       2.7237332786192967
+                      850                  revenge       2.6882013336210413
+
