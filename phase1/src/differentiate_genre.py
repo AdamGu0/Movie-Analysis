@@ -25,6 +25,17 @@ def print_diff(genres_movie, mltags,  tag_name_dict, g1,g2, model):
    # putil.print_result(model, 'genre_diff', g2, tag_name_dict, g2_res)
 
 
+def mapMovieToGenre(genres_tag_dict, g1_g2_movie_tag_dict):
+    genres_tag_movie = {}
+    for genreid in genres_tag_dict:
+        movielist = genres_tag_dict[genreid]
+        for movie_dict in movielist:
+            movieid = movie_dict['movieid']
+            if movieid in g1_g2_movie_tag_dict:
+                if not genreid in genres_tag_movie:
+                    genres_tag_movie[genreid] = g1_g2_movie_tag_dict[movieid]
+    return genres_tag_movie
+
 #return {movieid :{tagid:cnt}} movie tag dic given by docid
 def movieTag(doc_tag_dict, docid):
     doc_list =  doc_tag_dict[docid]
@@ -59,7 +70,8 @@ def calTFIDFDIFF(g1, g2, genres_tag_dict):
     g1_movie_tag_dict = movieTag(genres_tag_dict, g1)
     g2_movie_tag_dict = movieTag(genres_tag_dict, g2)
     g1_g2_movie_tag_dict = mergeG1G2(g1_movie_tag_dict, g2_movie_tag_dict)
-    g1_TFIDF = putil.calDocTFIDF(genres_tag_dict, g1, 'genre', movie = True, movie_tag_dict = g1_g2_movie_tag_dict)
+    genres_tag_movie = mapMovieToGenre(genres_tag_dict, g1_g2_movie_tag_dict)
+    g1_TFIDF = putil.calDocTFIDF(genres_tag_dict, g1, 'genre', movie = True, movie_tag_dict = genres_tag_movie)
     g2_TFIDF = putil.calDocTFIDF(genres_tag_dict, g2, 'genre', movie = True, movie_tag_dict = g1_g2_movie_tag_dict)
     return g1_TFIDF, g2_TFIDF
 
