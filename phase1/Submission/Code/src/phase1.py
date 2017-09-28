@@ -40,6 +40,7 @@ command_file = Path(command_name)
 
 if command_file.is_file():
     for line in fileinput.input():
+        line = line.rstrip()
         process(line.split(' '))
 else:
     process(sys.argv[1:len(sys.argv)])

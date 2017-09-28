@@ -4,4 +4,6 @@ print_genre_vector Western TF
 print_genre_vector Western TF-IDF
 print_user_vector 146 TF
 print_user_vector 146 TF-IDF
+differentiate_genre Thriller Horror TF-IDF-DIFF
+differentiate_genre Thriller Horror P-DIFF1
 differentiate_genre Thriller Horror P-DIFF2

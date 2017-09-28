@@ -1,0 +1,1349 @@
+actor_id : 1, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        2                 aircraft      0.45877131083285666
+                        1                    pilot      0.29122867534349595
+                        3                      spy      0.12500001382364737
+                        4                    agent      0.12500000000000003
+
+actor_id : 1, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        2                 aircraft       0.6675426216657133
+                        1                    pilot       0.3324573506869919
+                        3                      spy   2.7647294738301992e-08
+                        4                    agent    3.455911842287749e-17
+
+actor_id : 2, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war       0.5164051702435073
+                        6                    bombs      0.23359482525887265
+                        7                vigilante      0.12500000449762014
+                        8            crime-fighter                    0.125
+
+actor_id : 2, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war       0.7828103404870145
+                        6                    bombs      0.21718965051774528
+                        7                vigilante    8.995240284417219e-09
+                        8            crime-fighter   1.1244050355521523e-17
+
+actor_id : 3, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        9                narcotics                     0.25
+                       10                      cop                     0.25
+                       11            investigation                     0.25
+                       12                   bomber                     0.25
+
+actor_id : 3, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        9                narcotics                     0.25
+                       10                      cop                     0.25
+                       11            investigation                     0.25
+                       12                   bomber                     0.25
+
+actor_id : 4, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       13                    crime       0.6249999850000005
+                       14                    fight      0.12500000499999986
+                       15               espionage       0.12500000499999986
+                       16                   tuxedo      0.12500000499999986
+
+actor_id : 4, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       13                    crime        0.999999970000001
+                       14                    fight     9.99999970000001e-09
+                       15               espionage      9.99999970000001e-09
+                       16                   tuxedo     9.99999970000001e-09
+
+actor_id : 5, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       18                   combat      0.45877131083285666
+                       17                    sword      0.29122867534349595
+                       19                     kill      0.12500001382364737
+                       20                 training      0.12500000000000003
+
+actor_id : 5, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       18                   combat       0.6675426216657133
+                       17                    sword       0.3324573506869919
+                       19                     kill   2.7647294738301992e-08
+                       20                 training    3.455911842287749e-17
+
+actor_id : 6, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       22                     cars        0.583771324656504
+                       23              underground      0.24999975000025002
+                       21                  convict        0.166228925343246
+
+actor_id : 6, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       22                     cars       0.5968602513277349
+                       21                  convict        0.403139748672265
+                       23              underground   2.4461310485908553e-17
+
+actor_id : 7, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       24                 suspense       0.5837710608331067
+                       23              underground        0.416228675343496
+                       22                     cars     2.63823397369401e-07
+
+actor_id : 7, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       24                 suspense       0.6675426168079213
+                       23              underground      0.33245734826765777
+                       22                     cars   3.4924420932669914e-08
+
+actor_id : 8, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       24                 suspense                      0.5
+                       25                   acting         0.49999975000025
+                       23              underground    2.499997500260338e-07
+
+actor_id : 8, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       25                   acting        0.558150286762359
+                       24                 suspense       0.4418497132376409
+                       23              underground   4.5570300718660224e-17
+
+actor_id : 9, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       25                   acting                      0.5
+                       26                     kids         0.49999975000025
+                       24                 suspense    2.499997500260338e-07
+
+actor_id : 9, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       25                   acting       0.5581502867623591
+                       26                     kids       0.4418497132376408
+                       24                 suspense   4.5570300718660224e-17
+
+actor_id : 10, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       27                   jungle       0.7499999999999999
+                       26                     kids      0.25000000000000006
+
+actor_id : 10, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       27                   jungle                      1.0
+                       26                     kids    8.164521599191167e-17
+
+actor_id : 11, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       27                   jungle       0.7499999999999999
+                       26                     kids      0.25000000000000006
+
+actor_id : 11, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       27                   jungle                      1.0
+                       26                     kids    8.164521599191167e-17
+
+actor_id : 101, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       32                     love       0.0933628675611137
+                       53                  haunted      0.07902915290555612
+                       49                   murder      0.06963659428619685
+                       52               horrifying      0.06956527878857968
+                       51               mysterious      0.06956527878857968
+                       50                   killer      0.06016979030349571
+                       29                artillery      0.04424797805358402
+                       33                christmas      0.04424797805358402
+                       45                     game      0.04424797805358402
+                       54                  mansion      0.04424797805358402
+                       28                     guns     0.034781174851972116
+                       44                   soccer     0.034781174851972116
+                       48                detective     0.034781174851972116
+                       30               conspiracy     0.025388616232612835
+                       34                    dream     0.025388616232612835
+                       46                  cricket     0.025388616232612835
+                       31                   hitler       0.0253886154515236
+                       35               friendship       0.0253886154515236
+                       47                challenge       0.0253886154515236
+                       40                    maths      0.01562597645918131
+                       41                   genius     0.015625976361545155
+                       42                   boxing     0.015625976361545155
+                       43                 hardwork     0.015625976361545155
+                       36      based on true story     0.015625000000000003
+                       37                  failure     0.015625000000000003
+                       38              open source     0.015625000000000003
+                       39                    linux     0.015625000000000003
+
+actor_id : 101, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       32                     love      0.15547573512222734
+                       53                  haunted      0.09555830581111222
+                       49                   murder      0.07677318857239367
+                       51               mysterious      0.07663055757715932
+                       52               horrifying      0.07663055757715932
+                       50                   killer     0.057839580606991396
+                       29                artillery      0.05724595610716801
+                       33                christmas      0.05724595610716801
+                       45                     game      0.05724595610716801
+                       54                  mansion      0.05724595610716801
+                       28                     guns     0.038312349703944204
+                       44                   soccer     0.038312349703944204
+                       48                detective     0.038312349703944204
+                       30               conspiracy      0.01952723246522566
+                       34                    dream      0.01952723246522566
+                       46                  cricket      0.01952723246522566
+                       31                   hitler      0.01952723090304719
+                       35               friendship      0.01952723090304719
+                       47                challenge      0.01952723090304719
+                       40                    maths   1.9529183626137494e-06
+                       41                   genius    1.952723090304719e-06
+                       42                   boxing    1.952723090304719e-06
+                       43                 hardwork    1.952723090304719e-06
+                       36      based on true story    1.952723090304719e-18
+                       37                  failure    1.952723090304719e-18
+                       38              open source    1.952723090304719e-18
+                       39                    linux    1.952723090304719e-18
+
+actor_id : 102, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus      0.12945092793779805
+                       77                   sequel      0.11039928658957132
+                       79           snow mountains      0.09663424031131623
+                       80                   tarzan      0.07377107579769042
+                       76                   satire      0.07210952192702764
+                       59                  mission     0.034953523112855975
+                       56                  magical     0.026265046278255065
+                       60            secret agents     0.026265046278255065
+                       72                    chase     0.026265046278255065
+                       55               fairy tale     0.024590358599230137
+                       71                   rescue     0.024590358599230137
+                       81                    woods     0.024590358599230137
+                       57                 monsters     0.022928804866742904
+                       61                     cats     0.022928804866742904
+                       73                     snow     0.022928804866742904
+                       75                   disney     0.022928804866742904
+                       58                    funny     0.022928804728567374
+                       62                     dogs     0.022928804728567374
+                       74            based on book     0.022928804728567374
+                       67                   island     0.021201783379643572
+                       68                sooby doo      0.02120178336237163
+                       69                 treasure      0.02120178336237163
+                       70                    alien      0.02120178336237163
+                       63                 princess      0.02120161064296307
+                       64                 teenager      0.02120161064296307
+                       65                      ice      0.02120161064296307
+                       66                     baby      0.02120161064296307
+
+actor_id : 102, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus       0.1589018558755962
+                       77                   sequel      0.12079857317914268
+                       79           snow mountains      0.09326848062263254
+                       80                   tarzan      0.07254215159538087
+                       76                   satire      0.06921904385405533
+                       59                  mission      0.04490704622571196
+                       56                  magical      0.02753009255651015
+                       60            secret agents      0.02753009255651015
+                       72                    chase      0.02753009255651015
+                       55               fairy tale     0.024180717198460284
+                       71                   rescue     0.024180717198460284
+                       81                    woods     0.024180717198460284
+                       57                 monsters     0.020857609733485816
+                       61                     cats     0.020857609733485816
+                       73                     snow     0.020857609733485816
+                       75                   disney     0.020857609733485816
+                       58                    funny      0.02085760945713476
+                       62                     dogs      0.02085760945713476
+                       74            based on book      0.02085760945713476
+                       67                   island     0.017403566759287153
+                       68                sooby doo      0.01740356672474327
+                       69                 treasure      0.01740356672474327
+                       70                    alien      0.01740356672474327
+                       63                 princess     0.017403221285926147
+                       64                 teenager     0.017403221285926147
+                       65                      ice     0.017403221285926147
+                       66                     baby     0.017403221285926147
+
+actor_id : 103, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       88                 violence       0.1969795740982178
+                       87       special operations       0.1941547153411557
+                       91                 commando      0.15286831812255508
+                       90            ninja warrior      0.15145588874402402
+                       86             martial arts      0.09387222946544975
+                       89       witness protection      0.04834854411125594
+                       85        tyrannosaurus rex     0.042698826597131666
+                       84                 predator       0.0412863972186006
+                       83                 stampede     0.039873967840069524
+                       82                dinosaurs      0.03846153846153987
+
+actor_id : 103, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       88                 violence      0.24011299435028183
+                       87       special operations      0.23446327683615756
+                       91                 commando      0.22881355932203326
+                       90            ninja warrior      0.22598870056497114
+                       86             martial arts      0.03389830508474567
+                       89       witness protection      0.01977401129943497
+                       85        tyrannosaurus rex     0.008474576271186418
+                       84                 predator     0.005649717514124278
+                       83                 stampede     0.002824858757062139
+                       82                dinosaurs    2.824858757062139e-15
+
+user_id : 1, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       56                  magical       0.6675426216657133
+                       55               fairy tale       0.3324573506869919
+                       57                 monsters   2.7647294738301992e-08
+                       58                    funny    3.455911842287749e-17
+
+user_id : 1, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       56                  magical       0.6675426216657133
+                       55               fairy tale       0.3324573506869919
+                       57                 monsters   2.7647294738301992e-08
+                       58                    funny    3.455911842287749e-17
+
+user_id : 2, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       59                  mission       0.7828103404870145
+                       60            secret agents      0.21718965051774528
+                       61                     cats    8.995240284417219e-09
+                       62                     dogs   1.1244050355521523e-17
+
+user_id : 2, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       59                  mission       0.7828103404870145
+                       60            secret agents      0.21718965051774528
+                       61                     cats    8.995240284417219e-09
+                       62                     dogs   1.1244050355521523e-17
+
+user_id : 3, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       63                 princess                     0.25
+                       64                 teenager                     0.25
+                       65                      ice                     0.25
+                       66                     baby                     0.25
+
+user_id : 3, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       63                 princess                     0.25
+                       64                 teenager                     0.25
+                       65                      ice                     0.25
+                       66                     baby                     0.25
+
+user_id : 4, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       67                   island        0.999999970000001
+                       68                sooby doo     9.99999970000001e-09
+                       69                 treasure     9.99999970000001e-09
+                       70                    alien     9.99999970000001e-09
+
+user_id : 4, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       67                   island        0.999999970000001
+                       68                sooby doo     9.99999970000001e-09
+                       69                 treasure     9.99999970000001e-09
+                       70                    alien     9.99999970000001e-09
+
+user_id : 5, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       72                    chase       0.6675426216657133
+                       71                   rescue       0.3324573506869919
+                       73                     snow   2.7647294738301992e-08
+                       74            based on book    3.455911842287749e-17
+
+user_id : 5, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       72                    chase       0.6675426216657133
+                       71                   rescue       0.3324573506869919
+                       73                     snow   2.7647294738301992e-08
+                       74            based on book    3.455911842287749e-17
+
+user_id : 6, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       77                   sequel       0.6675426216657133
+                       76                   satire      0.33245735068699195
+                       75                   disney   2.7647294738301992e-08
+
+user_id : 6, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       77                   sequel       0.6113421392284037
+                       76                   satire      0.38865781648187403
+                       75                   disney   4.4289722163839153e-08
+
+user_id : 7, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       77                   sequel                      0.5
+                       76                   satire                     0.25
+                       78              santa claus                     0.25
+
+user_id : 7, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       77                   sequel       0.4676704533107984
+                       76                   satire       0.2984943200338026
+                       78              santa claus       0.2338352266553992
+
+user_id : 8, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus                      0.5
+                       77                   sequel                     0.25
+                       79           snow mountains                     0.25
+
+user_id : 8, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus                      0.5
+                       77                   sequel                     0.25
+                       79           snow mountains                     0.25
+
+user_id : 9, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus                      1.0
+                       79           snow mountains   3.3333333333333335e-17
+                       80                   tarzan   1.6666666666666667e-17
+
+user_id : 9, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus                      1.0
+                       79           snow mountains   3.3333333333333335e-17
+                       80                   tarzan   2.1275260383364658e-17
+
+user_id : 10, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       80                   tarzan       0.6666666666666666
+                       81                    woods       0.3333333333333333
+                       79           snow mountains    4.761904761904762e-18
+
+user_id : 10, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       80                   tarzan       0.5934172117958676
+                       81                    woods       0.4065827882041324
+                       79           snow mountains    3.320518992162967e-18
+
+user_id : 101, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war      0.14980480004331234
+                       24                 suspense      0.09207284264169928
+                       25                   acting      0.09207284264169928
+                       26                     kids      0.09207284264169928
+                       22                     cars      0.07397290743622105
+                       23              underground      0.05572989766285828
+                        2                 aircraft     0.055157925454931804
+                        6                    bombs     0.055157925454931804
+                       18                   combat     0.055157925454931804
+                       27                   jungle     0.055157925454931804
+                        1                    pilot      0.03691491718676748
+                       17                    sword      0.03691491718676748
+                       21                  convict      0.03691491718676748
+                        3                      spy     0.018814981981289246
+                        7                vigilante     0.018814981981289246
+                       19                     kill     0.018814981981289246
+                        4                    agent     0.018814980476090808
+                        8            crime-fighter     0.018814980476090808
+                       20                 training     0.018814980476090808
+                       13                    crime   1.8816861974138416e-06
+                       14                    fight   1.8814980476090808e-06
+                       15               espionage    1.8814980476090808e-06
+                       16                   tuxedo   1.8814980476090808e-06
+                        9                narcotics    1.881498047609081e-18
+                       10                      cop    1.881498047609081e-18
+                       11            investigation    1.881498047609081e-18
+                       12                   bomber    1.881498047609081e-18
+
+user_id : 101, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war      0.14980480004331242
+                       24                 suspense      0.09207284264169932
+                       25                   acting      0.09207284264169932
+                       26                     kids      0.09207284264169932
+                       22                     cars      0.07397290743622109
+                       23              underground      0.05572989766285832
+                        2                 aircraft      0.05515792545493183
+                        6                    bombs      0.05515792545493183
+                       18                   combat      0.05515792545493183
+                       27                   jungle      0.05515792545493183
+                        1                    pilot       0.0369149171867675
+                       17                    sword       0.0369149171867675
+                       21                  convict       0.0369149171867675
+                        3                      spy     0.018814981981289256
+                        7                vigilante     0.018814981981289256
+                       19                     kill     0.018814981981289256
+                        4                    agent     0.018814980476090818
+                        8            crime-fighter     0.018814980476090818
+                       20                 training     0.018814980476090818
+                       13                    crime   1.8816861974138426e-06
+                       14                    fight   1.8814980476090816e-06
+                       15               espionage    1.8814980476090816e-06
+                       16                   tuxedo   1.8814980476090816e-06
+                        9                narcotics    1.881498047609082e-18
+                       10                      cop    1.881498047609082e-18
+                       11            investigation    1.881498047609082e-18
+                       12                   bomber    1.881498047609082e-18
+
+user_id : 102, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       32                     love      0.15547573512222734
+                       53                  haunted      0.09555830581111222
+                       49                   murder      0.07677318857239367
+                       52               horrifying      0.07663055757715932
+                       51               mysterious      0.07663055757715932
+                       50                   killer     0.057839580606991396
+                       29                artillery      0.05724595610716801
+                       33                christmas      0.05724595610716801
+                       45                     game      0.05724595610716801
+                       54                  mansion      0.05724595610716801
+                       28                     guns     0.038312349703944204
+                       44                   soccer     0.038312349703944204
+                       48                detective     0.038312349703944204
+                       30               conspiracy      0.01952723246522566
+                       34                    dream      0.01952723246522566
+                       46                  cricket      0.01952723246522566
+                       31                   hitler      0.01952723090304719
+                       35               friendship      0.01952723090304719
+                       47                challenge      0.01952723090304719
+                       40                    maths   1.9529183626137494e-06
+                       41                   genius    1.952723090304719e-06
+                       42                   boxing    1.952723090304719e-06
+                       43                 hardwork    1.952723090304719e-06
+                       36      based on true story    1.952723090304719e-18
+                       37                  failure    1.952723090304719e-18
+                       38              open source    1.952723090304719e-18
+                       39                    linux    1.952723090304719e-18
+
+user_id : 102, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       32                     love      0.15547573512222737
+                       53                  haunted      0.09555830581111223
+                       49                   murder      0.07677318857239368
+                       51               mysterious      0.07663055757715934
+                       52               horrifying      0.07663055757715934
+                       50                   killer      0.05783958060699141
+                       29                artillery     0.057245956107168025
+                       33                christmas     0.057245956107168025
+                       45                     game     0.057245956107168025
+                       54                  mansion     0.057245956107168025
+                       28                     guns      0.03831234970394421
+                       44                   soccer      0.03831234970394421
+                       48                detective      0.03831234970394421
+                       30               conspiracy     0.019527232465225662
+                       34                    dream     0.019527232465225662
+                       46                  cricket     0.019527232465225662
+                       31                   hitler     0.019527230903047192
+                       35               friendship     0.019527230903047192
+                       47                challenge     0.019527230903047192
+                       40                    maths   1.9529183626137498e-06
+                       41                   genius   1.9527230903047193e-06
+                       42                   boxing   1.9527230903047193e-06
+                       43                 hardwork   1.9527230903047193e-06
+                       36      based on true story   1.9527230903047192e-18
+                       37                  failure   1.9527230903047192e-18
+                       38              open source   1.9527230903047192e-18
+                       39                    linux   1.9527230903047192e-18
+
+user_id : 103, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       88                 violence       0.2401129943502818
+                       87       special operations      0.23446327683615753
+                       91                 commando      0.22881355932203323
+                       90            ninja warrior       0.2259887005649711
+                       86             martial arts     0.033898305084745665
+                       89       witness protection      0.01977401129943497
+                       85        tyrannosaurus rex     0.008474576271186416
+                       84                 predator     0.005649717514124277
+                       83                 stampede    0.0028248587570621386
+                       82                dinosaurs   2.8248587570621386e-15
+
+user_id : 103, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       88                 violence      0.24011299435028183
+                       87       special operations      0.23446327683615756
+                       91                 commando      0.22881355932203326
+                       90            ninja warrior      0.22598870056497114
+                       86             martial arts     0.033898305084745665
+                       89       witness protection     0.019774011299434974
+                       85        tyrannosaurus rex     0.008474576271186416
+                       84                 predator     0.005649717514124278
+                       83                 stampede     0.002824858757062139
+                       82                dinosaurs    2.824858757062139e-15
+
+genre_id : Action, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war      0.14980480004331234
+                       24                 suspense      0.09207284264169928
+                       25                   acting      0.09207284264169928
+                       26                     kids      0.09207284264169928
+                       22                     cars      0.07397290743622105
+                       23              underground      0.05572989766285828
+                        2                 aircraft     0.055157925454931804
+                        6                    bombs     0.055157925454931804
+                       18                   combat     0.055157925454931804
+                       27                   jungle     0.055157925454931804
+                        1                    pilot      0.03691491718676748
+                       17                    sword      0.03691491718676748
+                       21                  convict      0.03691491718676748
+                        3                      spy     0.018814981981289246
+                        7                vigilante     0.018814981981289246
+                       19                     kill     0.018814981981289246
+                        4                    agent     0.018814980476090808
+                        8            crime-fighter     0.018814980476090808
+                       20                 training     0.018814980476090808
+                       13                    crime   1.8816861974138416e-06
+                       14                    fight   1.8814980476090808e-06
+                       15               espionage    1.8814980476090808e-06
+                       16                   tuxedo   1.8814980476090808e-06
+                        9                narcotics    1.881498047609081e-18
+                       10                      cop    1.881498047609081e-18
+                       11            investigation    1.881498047609081e-18
+                       12                   bomber    1.881498047609081e-18
+
+genre_id : Action, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war       0.1498048000433124
+                       24                 suspense      0.09207284264169932
+                       25                   acting      0.09207284264169932
+                       26                     kids      0.09207284264169932
+                       22                     cars      0.07397290743622108
+                       23              underground       0.0557298976628583
+                        2                 aircraft     0.055157925454931825
+                        6                    bombs     0.055157925454931825
+                       18                   combat     0.055157925454931825
+                       27                   jungle     0.055157925454931825
+                        1                    pilot     0.036914917186767496
+                       17                    sword     0.036914917186767496
+                       21                  convict     0.036914917186767496
+                        3                      spy     0.018814981981289253
+                        7                vigilante     0.018814981981289253
+                       19                     kill     0.018814981981289253
+                        4                    agent     0.018814980476090815
+                        8            crime-fighter     0.018814980476090815
+                       20                 training     0.018814980476090815
+                       13                    crime   1.8816861974138422e-06
+                       14                    fight   1.8814980476090814e-06
+                       15               espionage    1.8814980476090814e-06
+                       16                   tuxedo   1.8814980476090814e-06
+                        9                narcotics   1.8814980476090816e-18
+                       10                      cop   1.8814980476090816e-18
+                       11            investigation   1.8814980476090816e-18
+                       12                   bomber   1.8814980476090816e-18
+
+genre_id : War, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       29                artillery       0.6675426216657133
+                       28                     guns       0.3324573506869919
+                       30               conspiracy   2.7647294738301992e-08
+                       31                   hitler    3.455911842287749e-17
+
+genre_id : War, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       29                artillery       0.6675426216657133
+                       28                     guns       0.3324573506869919
+                       30               conspiracy   2.7647294738301992e-08
+                       31                   hitler    3.455911842287749e-17
+
+genre_id : Romance, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       32                     love       0.7828103404870145
+                       33                christmas      0.21718965051774528
+                       34                    dream    8.995240284417219e-09
+                       35               friendship   1.1244050355521523e-17
+
+genre_id : Romance, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       32                     love       0.7828103404870145
+                       33                christmas      0.21718965051774528
+                       34                    dream    8.995240284417219e-09
+                       35               friendship   1.1244050355521523e-17
+
+genre_id : Documentary, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       36      based on true story                     0.25
+                       37                  failure                     0.25
+                       38              open source                     0.25
+                       39                    linux                     0.25
+
+genre_id : Documentary, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       36      based on true story                     0.25
+                       37                  failure                     0.25
+                       38              open source                     0.25
+                       39                    linux                     0.25
+
+genre_id : Biography, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       40                    maths        0.999999970000001
+                       41                   genius     9.99999970000001e-09
+                       42                   boxing     9.99999970000001e-09
+                       43                 hardwork     9.99999970000001e-09
+
+genre_id : Biography, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       40                    maths        0.999999970000001
+                       41                   genius     9.99999970000001e-09
+                       42                   boxing     9.99999970000001e-09
+                       43                 hardwork     9.99999970000001e-09
+
+genre_id : Sport, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       45                     game       0.6675426216657133
+                       44                   soccer       0.3324573506869919
+                       46                  cricket   2.7647294738301992e-08
+                       47                challenge    3.455911842287749e-17
+
+genre_id : Sport, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       45                     game       0.6675426216657133
+                       44                   soccer       0.3324573506869919
+                       46                  cricket   2.7647294738301992e-08
+                       47                challenge    3.455911842287749e-17
+
+genre_id : Crime, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       51               mysterious       0.5000259654922142
+                       50                   killer       0.4999739929297359
+                       49                   murder    4.157804998280332e-08
+
+genre_id : Crime, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       51               mysterious       0.5000259602545707
+                       50                   killer      0.49997398769263685
+                       49                   murder   5.2052792452475924e-08
+
+genre_id : Mystery, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       52               horrifying       0.4999999999999167
+                       51               mysterious       0.4999999999999167
+                       50                   killer    1.666666666666389e-13
+
+genre_id : Mystery, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       51               mysterious       0.4999999999999166
+                       52               horrifying       0.4999999999999166
+                       50                   killer    1.666666666666389e-13
+
+genre_id : Horror, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       53                  haunted       0.9994845893079267
+                       52               horrifying   0.00030924641524400514
+                       51               mysterious   0.00020616427682926803
+
+genre_id : Horror, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       53                  haunted       0.9995882642763432
+                       52               horrifying     0.000247041434194128
+                       51               mysterious   0.00016469428946269706
+
+genre_id : Drama, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       53                  haunted       0.5000000000000001
+                       54                  mansion                      0.5
+                       52               horrifying    5.156764772431919e-17
+
+genre_id : Drama, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       54                  mansion       0.5733806950896074
+                       53                  haunted      0.42661930491039257
+                       52               horrifying   3.5145352243682625e-17
+
+genre_id : Family, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus      0.15890185587559616
+                       77                   sequel      0.12079857317914267
+                       79           snow mountains      0.09326848062263253
+                       80                   tarzan      0.07254215159538085
+                       76                   satire      0.06921904385405532
+                       59                  mission     0.044907046225711955
+                       56                  magical     0.027530092556510143
+                       60            secret agents     0.027530092556510143
+                       72                    chase     0.027530092556510143
+                       55               fairy tale      0.02418071719846028
+                       71                   rescue      0.02418071719846028
+                       81                    woods      0.02418071719846028
+                       57                 monsters     0.020857609733485813
+                       61                     cats     0.020857609733485813
+                       73                     snow     0.020857609733485813
+                       75                   disney     0.020857609733485813
+                       58                    funny     0.020857609457134756
+                       62                     dogs     0.020857609457134756
+                       74            based on book     0.020857609457134756
+                       67                   island      0.01740356675928715
+                       68                sooby doo     0.017403566724743268
+                       69                 treasure     0.017403566724743268
+                       70                    alien     0.017403566724743268
+                       63                 princess     0.017403221285926144
+                       64                 teenager     0.017403221285926144
+                       65                      ice     0.017403221285926144
+                       66                     baby     0.017403221285926144
+
+genre_id : Family, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus       0.1589018558755962
+                       77                   sequel      0.12079857317914268
+                       79           snow mountains      0.09326848062263254
+                       80                   tarzan      0.07254215159538087
+                       76                   satire      0.06921904385405533
+                       59                  mission      0.04490704622571196
+                       56                  magical      0.02753009255651015
+                       60            secret agents      0.02753009255651015
+                       72                    chase      0.02753009255651015
+                       55               fairy tale     0.024180717198460284
+                       71                   rescue     0.024180717198460284
+                       81                    woods     0.024180717198460284
+                       57                 monsters     0.020857609733485816
+                       61                     cats     0.020857609733485816
+                       73                     snow     0.020857609733485816
+                       75                   disney     0.020857609733485816
+                       58                    funny      0.02085760945713476
+                       62                     dogs      0.02085760945713476
+                       74            based on book      0.02085760945713476
+                       67                   island     0.017403566759287153
+                       68                sooby doo      0.01740356672474327
+                       69                 treasure      0.01740356672474327
+                       70                    alien      0.01740356672474327
+                       63                 princess     0.017403221285926147
+                       64                 teenager     0.017403221285926147
+                       65                      ice     0.017403221285926147
+                       66                     baby     0.017403221285926147
+
+genre_id : Drama, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       53                  haunted       0.5000000000000001
+                       54                  mansion                      0.5
+                       52               horrifying    5.156764772431919e-17
+
+genre_id : Drama, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       54                  mansion       0.5733806950896074
+                       53                  haunted      0.42661930491039257
+                       52               horrifying   3.5145352243682625e-17
+
+genre_id : Adventure, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       89       witness protection       0.2499999999999911
+                       88                 violence      0.21428571428570664
+                       87       special operations       0.1785714285714222
+                       86             martial arts      0.14285714285713777
+                       85        tyrannosaurus rex      0.10714285714285332
+                       84                 predator      0.07142857142856888
+                       83                 stampede      0.03571428571428444
+                       82                dinosaurs    3.571428571428444e-14
+
+genre_id : Adventure, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       89       witness protection       0.3093938859524606
+                       88                 violence      0.19731603258500185
+                       87       special operations      0.16443002715416818
+                       86             martial arts      0.13154402172333457
+                       85        tyrannosaurus rex      0.09865801629250093
+                       84                 predator      0.06577201086166728
+                       83                 stampede      0.03288600543083364
+                       82                dinosaurs   3.2886005430833643e-14
+
+genre_id : Sci-Fi, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       85        tyrannosaurus rex       0.4999999999999167
+                       84                 predator       0.3333333333332778
+                       83                 stampede       0.1666666666666389
+                       82                dinosaurs    1.666666666666389e-13
+
+genre_id : Sci-Fi, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       85        tyrannosaurus rex       0.4999999999999167
+                       84                 predator       0.3333333333332778
+                       83                 stampede       0.1666666666666389
+                       82                dinosaurs    1.666666666666389e-13
+
+genre_id : Animation, model : TF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       91                 commando       0.2552447552447544
+                       90            ninja warrior       0.2517482517482509
+                       88                 violence      0.24825174825174742
+                       87       special operations      0.24475524475524393
+                       86             martial arts   3.4965034965034846e-15
+
+genre_id : Animation, model : TF-IDF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       91                 commando      0.29210525311531127
+                       90            ninja warrior      0.28810381129181384
+                       88                 violence      0.21138408813541776
+                       87       special operations      0.20840684745745414
+                       86             martial arts     2.97724067796363e-15
+
+TF-IDF-DIFF here
+genre_diff_id : Action, model : TF-IDF-DIFF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war       0.1498048000433124
+                       24                 suspense      0.09207284264169932
+                       25                   acting      0.09207284264169932
+                       26                     kids      0.09207284264169932
+                       22                     cars      0.07397290743622108
+                       23              underground       0.0557298976628583
+                        2                 aircraft     0.055157925454931825
+                        6                    bombs     0.055157925454931825
+                       18                   combat     0.055157925454931825
+                       27                   jungle     0.055157925454931825
+                        1                    pilot     0.036914917186767496
+                       17                    sword     0.036914917186767496
+                       21                  convict     0.036914917186767496
+                        3                      spy     0.018814981981289253
+                        7                vigilante     0.018814981981289253
+                       19                     kill     0.018814981981289253
+                        4                    agent     0.018814980476090815
+                        8            crime-fighter     0.018814980476090815
+                       20                 training     0.018814980476090815
+                       13                    crime   1.8816861974138422e-06
+                       14                    fight   1.8814980476090814e-06
+                       15               espionage    1.8814980476090814e-06
+                       16                   tuxedo   1.8814980476090814e-06
+                        9                narcotics   1.8814980476090816e-18
+                       10                      cop   1.8814980476090816e-18
+                       11            investigation   1.8814980476090816e-18
+                       12                   bomber   1.8814980476090816e-18
+
+P-DIFF1
+genre_diff_id : Action, model : P-DIFF1, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       22                     cars      0.09321835303293263
+                       23              underground      0.09321835303293263
+                       24                 suspense      0.09321835303293263
+                       25                   acting      0.09321835303293263
+                       26                     kids      0.09321835303293263
+                        1                    pilot    0.0019248752234126726
+                        2                 aircraft    0.0019248752234126726
+                        3                      spy    0.0019248752234126726
+                        4                    agent    0.0019248752234126726
+                        5                      war    0.0019248752234126726
+                        6                    bombs    0.0019248752234126726
+                        7                vigilante    0.0019248752234126726
+                        8            crime-fighter    0.0019248752234126726
+                        9                narcotics    0.0019248752234126726
+                       10                      cop    0.0019248752234126726
+                       11            investigation    0.0019248752234126726
+                       12                   bomber    0.0019248752234126726
+                       13                    crime    0.0019248752234126726
+                       14                    fight    0.0019248752234126726
+                       15               espionage     0.0019248752234126726
+                       16                   tuxedo    0.0019248752234126726
+                       17                    sword    0.0019248752234126726
+                       18                   combat    0.0019248752234126726
+                       19                     kill    0.0019248752234126726
+                       20                 training    0.0019248752234126726
+                       21                  convict    0.0019248752234126726
+                       27                   jungle    0.0019248752234126726
+
+genre_diff_id : Action, model : P-DIFF2, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       22                     cars      0.14106338553035144
+                       23              underground      0.14106338553035144
+                       24                 suspense      0.14106338553035144
+                       25                   acting      0.14106338553035144
+                       26                     kids      0.14106338553035144
+                        1                    pilot      0.04330491285213141
+                        2                 aircraft      0.04330491285213141
+                        3                      spy      0.04330491285213141
+                        4                    agent      0.04330491285213141
+                        5                      war      0.04330491285213141
+                        6                    bombs      0.04330491285213141
+                        7                vigilante      0.04330491285213141
+                        8            crime-fighter      0.04330491285213141
+                        9                narcotics      0.04330491285213141
+                       10                      cop      0.04330491285213141
+                       11            investigation      0.04330491285213141
+                       12                   bomber      0.04330491285213141
+                       13                    crime      0.04330491285213141
+                       14                    fight      0.04330491285213141
+                       15               espionage       0.04330491285213141
+                       16                   tuxedo      0.04330491285213141
+                       17                    sword      0.04330491285213141
+                       18                   combat      0.04330491285213141
+                       19                     kill      0.04330491285213141
+                       20                 training      0.04330491285213141
+                       21                  convict      0.04330491285213141
+                       27                   jungle      0.04330491285213141
+
+TF-IDF-DIFF here
+genre_diff_id : Family, model : TF-IDF-DIFF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       78              santa claus       0.1589018558755962
+                       77                   sequel      0.12079857317914268
+                       79           snow mountains      0.09326848062263254
+                       80                   tarzan      0.07254215159538087
+                       76                   satire      0.06921904385405533
+                       59                  mission      0.04490704622571196
+                       56                  magical      0.02753009255651015
+                       60            secret agents      0.02753009255651015
+                       72                    chase      0.02753009255651015
+                       55               fairy tale     0.024180717198460284
+                       71                   rescue     0.024180717198460284
+                       81                    woods     0.024180717198460284
+                       57                 monsters     0.020857609733485816
+                       61                     cats     0.020857609733485816
+                       73                     snow     0.020857609733485816
+                       75                   disney     0.020857609733485816
+                       58                    funny      0.02085760945713476
+                       62                     dogs      0.02085760945713476
+                       74            based on book      0.02085760945713476
+                       67                   island     0.017403566759287153
+                       68                sooby doo      0.01740356672474327
+                       69                 treasure      0.01740356672474327
+                       70                    alien      0.01740356672474327
+                       63                 princess     0.017403221285926147
+                       64                 teenager     0.017403221285926147
+                       65                      ice     0.017403221285926147
+                       66                     baby     0.017403221285926147
+
+P-DIFF1
+genre_diff_id : Family, model : P-DIFF1, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       76                   satire      0.09321835303293263
+                       77                   sequel      0.09321835303293263
+                       78              santa claus      0.09321835303293263
+                       79           snow mountains      0.09321835303293263
+                       80                   tarzan      0.09321835303293263
+                       55               fairy tale    0.0019248752234126726
+                       56                  magical    0.0019248752234126726
+                       57                 monsters    0.0019248752234126726
+                       58                    funny    0.0019248752234126726
+                       59                  mission    0.0019248752234126726
+                       60            secret agents    0.0019248752234126726
+                       61                     cats    0.0019248752234126726
+                       62                     dogs    0.0019248752234126726
+                       63                 princess    0.0019248752234126726
+                       64                 teenager    0.0019248752234126726
+                       65                      ice    0.0019248752234126726
+                       66                     baby    0.0019248752234126726
+                       67                   island    0.0019248752234126726
+                       68                sooby doo    0.0019248752234126726
+                       69                 treasure    0.0019248752234126726
+                       70                    alien    0.0019248752234126726
+                       71                   rescue    0.0019248752234126726
+                       72                    chase    0.0019248752234126726
+                       73                     snow    0.0019248752234126726
+                       74            based on book    0.0019248752234126726
+                       75                   disney    0.0019248752234126726
+                       81                    woods    0.0019248752234126726
+
+genre_diff_id : Family, model : P-DIFF2, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       76                   satire      0.14106338553035144
+                       77                   sequel      0.14106338553035144
+                       78              santa claus      0.14106338553035144
+                       79           snow mountains      0.14106338553035144
+                       80                   tarzan      0.14106338553035144
+                       55               fairy tale      0.04330491285213141
+                       56                  magical      0.04330491285213141
+                       57                 monsters      0.04330491285213141
+                       58                    funny      0.04330491285213141
+                       59                  mission      0.04330491285213141
+                       60            secret agents      0.04330491285213141
+                       61                     cats      0.04330491285213141
+                       62                     dogs      0.04330491285213141
+                       63                 princess      0.04330491285213141
+                       64                 teenager      0.04330491285213141
+                       65                      ice      0.04330491285213141
+                       66                     baby      0.04330491285213141
+                       67                   island      0.04330491285213141
+                       68                sooby doo      0.04330491285213141
+                       69                 treasure      0.04330491285213141
+                       70                    alien      0.04330491285213141
+                       71                   rescue      0.04330491285213141
+                       72                    chase      0.04330491285213141
+                       73                     snow      0.04330491285213141
+                       74            based on book      0.04330491285213141
+                       75                   disney      0.04330491285213141
+                       81                    woods      0.04330491285213141
+
+TF-IDF-DIFF here
+genre_diff_id : Action, model : TF-IDF-DIFF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war       0.1498048000433124
+                       24                 suspense      0.09207284264169932
+                       25                   acting      0.09207284264169932
+                       26                     kids      0.09207284264169932
+                       22                     cars      0.07397290743622108
+                       23              underground       0.0557298976628583
+                        2                 aircraft     0.055157925454931825
+                        6                    bombs     0.055157925454931825
+                       18                   combat     0.055157925454931825
+                       27                   jungle     0.055157925454931825
+                        1                    pilot     0.036914917186767496
+                       17                    sword     0.036914917186767496
+                       21                  convict     0.036914917186767496
+                        3                      spy     0.018814981981289253
+                        7                vigilante     0.018814981981289253
+                       19                     kill     0.018814981981289253
+                        4                    agent     0.018814980476090815
+                        8            crime-fighter     0.018814980476090815
+                       20                 training     0.018814980476090815
+                       13                    crime   1.8816861974138422e-06
+                       14                    fight   1.8814980476090814e-06
+                       15               espionage    1.8814980476090814e-06
+                       16                   tuxedo   1.8814980476090814e-06
+                        9                narcotics   1.8814980476090816e-18
+                       10                      cop   1.8814980476090816e-18
+                       11            investigation   1.8814980476090816e-18
+                       12                   bomber   1.8814980476090816e-18
+
+P-DIFF1
+genre_diff_id : Action, model : P-DIFF1, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        1                    pilot      -0.0870577492906948
+                        2                 aircraft      -0.0870577492906948
+                        3                      spy      -0.0870577492906948
+                        4                    agent      -0.0870577492906948
+                        5                      war      -0.0870577492906948
+                        6                    bombs      -0.0870577492906948
+                        7                vigilante      -0.0870577492906948
+                        8            crime-fighter      -0.0870577492906948
+                        9                narcotics      -0.0870577492906948
+                       10                      cop      -0.0870577492906948
+                       11            investigation      -0.0870577492906948
+                       12                   bomber      -0.0870577492906948
+                       13                    crime      -0.0870577492906948
+                       14                    fight      -0.0870577492906948
+                       15               espionage       -0.0870577492906948
+                       16                   tuxedo      -0.0870577492906948
+                       17                    sword      -0.0870577492906948
+                       18                   combat      -0.0870577492906948
+                       19                     kill      -0.0870577492906948
+                       20                 training      -0.0870577492906948
+                       21                  convict      -0.0870577492906948
+                       27                   jungle      -0.0870577492906948
+                       22                     cars     -0.10576221328468567
+                       23              underground     -0.10576221328468567
+                       24                 suspense     -0.10576221328468567
+                       25                   acting     -0.10576221328468567
+                       26                     kids     -0.10576221328468567
+
+genre_diff_id : Action, model : P-DIFF2, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        1                    pilot     -0.04477961930242161
+                        2                 aircraft     -0.04477961930242161
+                        3                      spy     -0.04477961930242161
+                        4                    agent     -0.04477961930242161
+                        5                      war     -0.04477961930242161
+                        6                    bombs     -0.04477961930242161
+                        7                vigilante     -0.04477961930242161
+                        8            crime-fighter     -0.04477961930242161
+                        9                narcotics     -0.04477961930242161
+                       10                      cop     -0.04477961930242161
+                       11            investigation     -0.04477961930242161
+                       12                   bomber     -0.04477961930242161
+                       13                    crime     -0.04477961930242161
+                       14                    fight     -0.04477961930242161
+                       15               espionage      -0.04477961930242161
+                       16                   tuxedo     -0.04477961930242161
+                       17                    sword     -0.04477961930242161
+                       18                   combat     -0.04477961930242161
+                       19                     kill     -0.04477961930242161
+                       20                 training     -0.04477961930242161
+                       21                  convict     -0.04477961930242161
+                       27                   jungle     -0.04477961930242161
+                       22                     cars     -0.05109422917051717
+                       23              underground     -0.05109422917051717
+                       24                 suspense     -0.05109422917051717
+                       25                   acting     -0.05109422917051717
+                       26                     kids     -0.05109422917051717
+
+TF-IDF-DIFF here
+genre_diff_id : Action, model : TF-IDF-DIFF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        5                      war       0.1498048000433124
+                       24                 suspense      0.09207284264169932
+                       25                   acting      0.09207284264169932
+                       26                     kids      0.09207284264169932
+                       22                     cars      0.07397290743622108
+                       23              underground       0.0557298976628583
+                        2                 aircraft     0.055157925454931825
+                        6                    bombs     0.055157925454931825
+                       18                   combat     0.055157925454931825
+                       27                   jungle     0.055157925454931825
+                        1                    pilot     0.036914917186767496
+                       17                    sword     0.036914917186767496
+                       21                  convict     0.036914917186767496
+                        3                      spy     0.018814981981289253
+                        7                vigilante     0.018814981981289253
+                       19                     kill     0.018814981981289253
+                        4                    agent     0.018814980476090815
+                        8            crime-fighter     0.018814980476090815
+                       20                 training     0.018814980476090815
+                       13                    crime   1.8816861974138422e-06
+                       14                    fight   1.8814980476090814e-06
+                       15               espionage    1.8814980476090814e-06
+                       16                   tuxedo   1.8814980476090814e-06
+                        9                narcotics   1.8814980476090816e-18
+                       10                      cop   1.8814980476090816e-18
+                       11            investigation   1.8814980476090816e-18
+                       12                   bomber   1.8814980476090816e-18
+
+P-DIFF1
+genre_diff_id : Action, model : P-DIFF1, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        1                    pilot      -0.0870577492906948
+                        2                 aircraft      -0.0870577492906948
+                        3                      spy      -0.0870577492906948
+                        4                    agent      -0.0870577492906948
+                        5                      war      -0.0870577492906948
+                        6                    bombs      -0.0870577492906948
+                        7                vigilante      -0.0870577492906948
+                        8            crime-fighter      -0.0870577492906948
+                        9                narcotics      -0.0870577492906948
+                       10                      cop      -0.0870577492906948
+                       11            investigation      -0.0870577492906948
+                       12                   bomber      -0.0870577492906948
+                       13                    crime      -0.0870577492906948
+                       14                    fight      -0.0870577492906948
+                       15               espionage       -0.0870577492906948
+                       16                   tuxedo      -0.0870577492906948
+                       17                    sword      -0.0870577492906948
+                       18                   combat      -0.0870577492906948
+                       19                     kill      -0.0870577492906948
+                       20                 training      -0.0870577492906948
+                       21                  convict      -0.0870577492906948
+                       27                   jungle      -0.0870577492906948
+                       22                     cars     -0.10576221328468567
+                       23              underground     -0.10576221328468567
+                       24                 suspense     -0.10576221328468567
+                       25                   acting     -0.10576221328468567
+                       26                     kids     -0.10576221328468567
+
+genre_diff_id : Action, model : P-DIFF2, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                        1                    pilot     -0.04477961930242161
+                        2                 aircraft     -0.04477961930242161
+                        3                      spy     -0.04477961930242161
+                        4                    agent     -0.04477961930242161
+                        5                      war     -0.04477961930242161
+                        6                    bombs     -0.04477961930242161
+                        7                vigilante     -0.04477961930242161
+                        8            crime-fighter     -0.04477961930242161
+                        9                narcotics     -0.04477961930242161
+                       10                      cop     -0.04477961930242161
+                       11            investigation     -0.04477961930242161
+                       12                   bomber     -0.04477961930242161
+                       13                    crime     -0.04477961930242161
+                       14                    fight     -0.04477961930242161
+                       15               espionage      -0.04477961930242161
+                       16                   tuxedo     -0.04477961930242161
+                       17                    sword     -0.04477961930242161
+                       18                   combat     -0.04477961930242161
+                       19                     kill     -0.04477961930242161
+                       20                 training     -0.04477961930242161
+                       21                  convict     -0.04477961930242161
+                       27                   jungle     -0.04477961930242161
+                       22                     cars     -0.05109422917051717
+                       23              underground     -0.05109422917051717
+                       24                 suspense     -0.05109422917051717
+                       25                   acting     -0.05109422917051717
+                       26                     kids     -0.05109422917051717
+
+TF-IDF-DIFF here
+genre_diff_id : Thriller, model : TF-IDF-DIFF, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       49                   murder       0.5990321143718713
+                       48                detective       0.4009678856281287
+                       50                   killer    2.477158654487387e-17
+
+P-DIFF1
+genre_diff_id : Thriller, model : P-DIFF1, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       49                   murder       0.8286971537653982
+                       48                detective    -0.032717509904550975
+                       50                   killer      -0.3558149570727957
+
+genre_diff_id : Thriller, model : P-DIFF2, format : <tag_id, tag_name, weight>
+
+                   tag_id                 tag_name                   weight
+                       48                detective       0.8286971537653982
+                       49                   murder    -0.032717509904550975
+                       50                   killer      -2.2161022480912638
+

@@ -14,8 +14,10 @@ def print_diff(genres_movie, mltags,  tag_name_dict, g1,g2, model):
     g1_res = {}
     g2_res = {}
     if model == 'TF-IDF-DIFF':
+        print("TF-IDF-DIFF here")
         g1_res, g2_res= calTFIDFDIFF(g1, g2, genres_tag_dict)
     elif model == 'P-DIFF1':
+        print("P-DIFF1")
         g1_res = calPDIFF(genres_tag_dict, g1, g2, PDIFF=1)
         g2_res = calPDIFF(genres_tag_dict, g2, g1, PDIFF=1)
     elif model == 'P-DIFF2':
@@ -82,19 +84,21 @@ def calPDIFF(genres_tag_dict, g1, g2, PDIFF = 1):
     #all_tag_dict = getAllTags(g1_g2_movie_tag_dict)
     g1_tag_dict = getAllTags(g1_movie_tag_dict)
     #g2_tag_dict = getAllTags(g2_movie_tag_dict)
-    R = len(g1_movie_tag_dict)
+
     M = len(g1_g2_movie_tag_dict)
     tag_weight_res = {}
     for tagid in g1_tag_dict:
         m1,m2 = cntMoviesContainTag(g1_g2_movie_tag_dict, tagid)
         if PDIFF == 1:
+            R = len(g1_movie_tag_dict)
             r, _= cntMoviesContainTag(g1_movie_tag_dict, tagid)
             m = m1
         else:
+            R = len(g2_movie_tag_dict)
             _, r = cntMoviesContainTag(g2_movie_tag_dict, tagid)
             m = m2
         if not tagid in tag_weight_res:
-            tag_weight_res[tagid] = math.exp(r*(M-R-m+r)/((m-r+1)*(R-r+1)))*abs(r/(R+1) - (m-r)/(M - R + 1))
+            tag_weight_res[tagid] = math.log((r+m/M)*(M-R-m+r+m/M)/((m-r+1)*(R-r+1)))*abs((r+m/M)/(R+1) - (m-r+m/M)/(M - R + 1))
     return tag_weight_res
 
 def cntMoviesContainTag(movie_tag_dict, tag_id):

@@ -1,7 +1,7 @@
 import math
 import numpy as np
 from pathlib import Path
-
+from datetime import datetime
 
 #input  dict    docs_dict   {docid : [attributes]}
 #       int     docid
@@ -57,10 +57,17 @@ def normalize_tag_weight(tag_list):
     return tag_list
 
 def timeToNumber(time_str):
-    num = 0
-    for c in time_str:
-        if c.isdigit():
-            num = num * 10 + int(c)
+    # num = 0
+    # for c in time_str:
+    #     if c.isdigit():
+    #         num = num * 10 + int(c)
+    dt = datetime.strptime(time_str, '%Y-%m-%d %H:%M:%S')
+    num = int(dt.year) * 10 ** 10
+    num += int(dt.month) * 10 ** 8
+    num += int(dt.day) * 10 ** 6
+    num += int(dt.hour) * 10 ** 4
+    num += int(dt.minute) * 10 ** 2
+    num += int(dt.second)
     return num
 
 def dataframe_to_dict_by_key(dataframe, key = 'None'):
@@ -270,7 +277,7 @@ def convertDictToList(tag_weight_dict, tag_name_dict):
     for tagid in tag_weight_dict:
         tup = (tagid, tag_name_dict[tagid] ,tag_weight_dict[tagid])
         tag_list.append(tup)
-    tag_list.sort(key=lambda tup: tup[2], reverse=True)
+    tag_list.sort(key=lambda tup: tup[2], reverse = True)
     return tag_list
 
 #return {tagid, tagname}

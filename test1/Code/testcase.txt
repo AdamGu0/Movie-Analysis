@@ -1,0 +1,99 @@
+print_actor_vector 1 TF
+print_actor_vector 1 TF-IDF
+print_actor_vector 2 TF
+print_actor_vector 2 TF-IDF
+print_actor_vector 3 TF
+print_actor_vector 3 TF-IDF
+print_actor_vector 4 TF
+print_actor_vector 4 TF-IDF
+print_actor_vector 5 TF
+print_actor_vector 5 TF-IDF
+print_actor_vector 6 TF
+print_actor_vector 6 TF-IDF
+print_actor_vector 7 TF
+print_actor_vector 7 TF-IDF
+print_actor_vector 8 TF
+print_actor_vector 8 TF-IDF
+print_actor_vector 9 TF
+print_actor_vector 9 TF-IDF
+print_actor_vector 10 TF
+print_actor_vector 10 TF-IDF
+print_actor_vector 11 TF
+print_actor_vector 11 TF-IDF
+print_actor_vector 101 TF
+print_actor_vector 101 TF-IDF
+print_actor_vector 102 TF
+print_actor_vector 102 TF-IDF
+print_actor_vector 103 TF
+print_actor_vector 103 TF-IDF
+print_user_vector 1 TF
+print_user_vector 1 TF-IDF
+print_user_vector 2 TF
+print_user_vector 2 TF-IDF
+print_user_vector 3 TF
+print_user_vector 3 TF-IDF
+print_user_vector 4 TF
+print_user_vector 4 TF-IDF
+print_user_vector 5 TF
+print_user_vector 5 TF-IDF
+print_user_vector 6 TF
+print_user_vector 6 TF-IDF
+print_user_vector 7 TF
+print_user_vector 7 TF-IDF
+print_user_vector 8 TF
+print_user_vector 8 TF-IDF
+print_user_vector 9 TF
+print_user_vector 9 TF-IDF
+print_user_vector 10 TF
+print_user_vector 10 TF-IDF
+print_user_vector 101 TF
+print_user_vector 101 TF-IDF
+print_user_vector 102 TF
+print_user_vector 102 TF-IDF
+print_user_vector 103 TF
+print_user_vector 103 TF-IDF
+print_genre_vector Action TF
+print_genre_vector Action TF-IDF
+print_genre_vector War TF
+print_genre_vector War TF-IDF
+print_genre_vector Romance TF
+print_genre_vector Romance TF-IDF
+print_genre_vector Documentary TF
+print_genre_vector Documentary TF-IDF
+print_genre_vector Biography TF
+print_genre_vector Biography TF-IDF
+print_genre_vector Sport TF
+print_genre_vector Sport TF-IDF
+print_genre_vector Crime TF
+print_genre_vector Crime TF-IDF
+print_genre_vector Mystery TF
+print_genre_vector Mystery TF-IDF
+print_genre_vector Horror TF
+print_genre_vector Horror TF-IDF
+print_genre_vector Drama TF
+print_genre_vector Drama TF-IDF
+print_genre_vector Family TF
+print_genre_vector Family TF-IDF
+print_genre_vector Drama TF
+print_genre_vector Drama TF-IDF
+print_genre_vector Adventure TF
+print_genre_vector Adventure TF-IDF
+print_genre_vector Sci-Fi TF
+print_genre_vector Sci-Fi TF-IDF
+print_genre_vector Animation TF
+print_genre_vector Animation TF-IDF
+differentiate_genre Action Family TF-IDF-DIFF
+differentiate_genre Action Family P-DIFF1
+differentiate_genre Action Family P-DIFF2
+differentiate_genre Family Action TF-IDF-DIFF
+differentiate_genre Family Action P-DIFF1
+differentiate_genre Family Action P-DIFF2
+differentiate_genre Action War TF-IDF-DIFF
+differentiate_genre Action War P-DIFF1
+differentiate_genre Action War P-DIFF2
+differentiate_genre Action Documentary TF-IDF-DIFF
+differentiate_genre Action Documentary P-DIFF1
+differentiate_genre Action Documentary P-DIFF2
+differentiate_genre Thriller Crime TF-IDF-DIFF
+differentiate_genre Thriller Crime P-DIFF1
+differentiate_genre Thriller Crime P-DIFF2

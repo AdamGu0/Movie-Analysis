@@ -14,8 +14,10 @@ def print_diff(genres_movie, mltags,  tag_name_dict, g1,g2, model):
     g1_res = {}
     g2_res = {}
     if model == 'TF-IDF-DIFF':
+        print("TF-IDF-DIFF here")
         g1_res, g2_res= calTFIDFDIFF(g1, g2, genres_tag_dict)
     elif model == 'P-DIFF1':
+        print("P-DIFF1")
         g1_res = calPDIFF(genres_tag_dict, g1, g2, PDIFF=1)
         g2_res = calPDIFF(genres_tag_dict, g2, g1, PDIFF=1)
     elif model == 'P-DIFF2':
@@ -24,6 +26,17 @@ def print_diff(genres_movie, mltags,  tag_name_dict, g1,g2, model):
     putil.print_result(model, 'genre_diff', g1, tag_name_dict, g1_res)
    # putil.print_result(model, 'genre_diff', g2, tag_name_dict, g2_res)
 
+
+def mapMovieToGenre(genres_tag_dict, g1_g2_movie_tag_dict):
+    genres_tag_movie = {}
+    for genreid in genres_tag_dict:
+        movielist = genres_tag_dict[genreid]
+        for movie_dict in movielist:
+            movieid = movie_dict['movieid']
+            if movieid in g1_g2_movie_tag_dict:
+                if not genreid in genres_tag_movie:
+                    genres_tag_movie[genreid] = g1_g2_movie_tag_dict[movieid]
+    return genres_tag_movie
 
 #return {movieid :{tagid:cnt}} movie tag dic given by docid
 def movieTag(doc_tag_dict, docid):
@@ -59,7 +72,8 @@ def calTFIDFDIFF(g1, g2, genres_tag_dict):
     g1_movie_tag_dict = movieTag(genres_tag_dict, g1)
     g2_movie_tag_dict = movieTag(genres_tag_dict, g2)
     g1_g2_movie_tag_dict = mergeG1G2(g1_movie_tag_dict, g2_movie_tag_dict)
-    g1_TFIDF = putil.calDocTFIDF(genres_tag_dict, g1, 'genre', movie = True, movie_tag_dict = g1_g2_movie_tag_dict)
+    genres_tag_movie = mapMovieToGenre(genres_tag_dict, g1_g2_movie_tag_dict)
+    g1_TFIDF = putil.calDocTFIDF(genres_tag_dict, g1, 'genre', movie = True, movie_tag_dict = genres_tag_movie)
     g2_TFIDF = putil.calDocTFIDF(genres_tag_dict, g2, 'genre', movie = True, movie_tag_dict = g1_g2_movie_tag_dict)
     return g1_TFIDF, g2_TFIDF
 
@@ -82,7 +96,7 @@ def calPDIFF(genres_tag_dict, g1, g2, PDIFF = 1):
             _, r = cntMoviesContainTag(g2_movie_tag_dict, tagid)
             m = m2
         if not tagid in tag_weight_res:
-            tag_weight_res[tagid] = math.exp(r*(M-R-m+r)/((m-r+1)*(R-r+1)))*abs(r/(R+1) - (m-r)/(M - R + 1))
+            tag_weight_res[tagid] = math.exp((r+m/M)*(M-R-m+r+m/M)/((m-r+1)*(R-r+1)))*abs((r+m/M)/(R+1) - (m-r+m/M)/(M - R + 1))
     return tag_weight_res
 
 def cntMoviesContainTag(movie_tag_dict, tag_id):
