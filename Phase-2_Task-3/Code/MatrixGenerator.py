@@ -63,5 +63,54 @@ def actor_actor_matrix():
 
     # Output to CSV file
     hpF.write_csv(file_out, result_list)
+# ------ End of Actor-Actor Matrix ------
 
 
+def coactor_coactor_matrix():
+    # csv files
+    file_a = os.path.join(os.pardir, "Phase2_data/imdb-actor-info.csv")
+    file_out = os.path.join(os.pardir, "Outputs/CoActor-CoActor-Matrix.csv")
+
+    # Actor IDs
+    all_actor_id = []
+    # Get all actors and all tags
+    with open(file_a, 'r') as fa:
+        reader_a = csv.reader(fa)
+        # Skip the headers
+        next(reader_a, None)
+
+        for row in reader_a:
+            all_actor_id.append(row[0])
+    # End of Getting ActorIDs
+
+    # Actor-ActorVector 2-D List
+    # Row - ActorIDs, same order(index) with all_actor_id list
+    # Column - ActorIDs
+    # Values - Num of movies which two actors (actor in Row, actor in Col) acted in together
+    actor_actor_list = []
+
+    # Fill each row
+    for actor_id in all_actor_id:
+        actor_actor_list.append(hpF.actor_coact_calculator(actor_id, all_actor_id))
+
+    # Output to csv file
+    # Get Actor Names
+    with open(file_a, 'r') as fa:
+        reader_a = csv.reader(fa)
+        next(reader_a, None)
+        header = [' ']
+        for row in reader_a:
+            header.append(row[1])
+
+    result_list = [header]
+    for i in range(0, len(all_actor_id)):
+        r = [header[i + 1]] + actor_actor_list[i]
+        result_list.append(r)
+
+    # Output to CSV file
+    hpF.write_csv(file_out, result_list)
+# ------ End of CoActor-CoActor Matrix ------
+
+# if __name__ == '__main__':
+#     actor_actor_matrix()
+#     coactor_coactor_matrix()

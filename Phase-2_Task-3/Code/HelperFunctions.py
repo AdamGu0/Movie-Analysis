@@ -58,9 +58,8 @@ def tag_weight_calculator(file_a, file_b, actor_id):
                 r_list.append(row_a[2])
     # ----- End of processing movie-actor file -----
 
-    # If actor_id invalid or does not exist
+    # If No Movie found, return None
     if len(m_list) == 0:
-        print('No Result for Given Actor due to Relevant MovieID Not Found')
         return None
 
     # Normalize rank list to [0, 1], and map Weight(rank) to ranks
@@ -90,6 +89,10 @@ def tag_weight_calculator(file_a, file_b, actor_id):
                 ts_list.append(row_b[3])
 
     # ----- End of processing mltags file -----
+
+    # If No Tag found, return None
+    if len(t_list) == 0:
+        return None
 
     # Normalize timestamp list to [0, 1], and map Weight(timestamp) to timestamp
     ts_dict = normalize_timestamp(all_ts_list=all_ts_list, ts_list=ts_list)
@@ -173,3 +176,49 @@ def write_csv(file_name, result_list):
         for r in result_list:
             writer.writerow(r)
 # ----- End of write_csv -----
+
+
+# Actor-CoActMovieNum
+def actor_coact_calculator(actor_id, all_actor_id):
+    file = os.path.join(os.pardir, "Phase2_data/movie-actor.csv")
+
+    # Movie list of an Actor
+    m_list = []
+    # Co-Actor list
+    coactor_list = []
+
+    with open(file, 'r') as f:
+        reader = csv.reader(f)
+
+        # Get all movies which the Actor acted in
+        for row in reader:
+            if row[1] == actor_id:
+                m_list.append(row[0])
+
+        # Search the file again for every movie to find co-actors
+        for m in m_list:
+            f.seek(0)
+            for row in reader:
+                if row[0] == m and row[1] != actor_id:
+                    coactor_list.append(row[1])
+    # End of File Searching
+
+    # The dictionary for co-actor (key), num of movies (value)
+    actor_num_dict = {}
+    for a in coactor_list:
+        # If an actor is already in the dict, value + 1
+        if a in actor_num_dict:
+            actor_num_dict[a] = actor_num_dict.get(a) + 1
+        else:
+            actor_num_dict[a] = 1
+
+    # Return list
+    actor_num_list = []
+    for i in range(0, len(all_actor_id)):
+        if all_actor_id[i] in actor_num_dict:
+            actor_num_list.append(actor_num_dict.get(all_actor_id[i]))
+        else:
+            actor_num_list.append(0)
+
+    return actor_num_list
+# ----- End of Actor - CoActMovieNum -----
