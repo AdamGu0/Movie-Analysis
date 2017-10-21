@@ -1,5 +1,5 @@
-from genre import prepareData
-import phase1util as putil
+from src.genre import prepareData
+import src.phase1util as putil
 import pandas as pd
 import math
 

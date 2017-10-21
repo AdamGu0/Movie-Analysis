@@ -8,41 +8,138 @@ from datetime import datetime
 #       str     attribute_str
 #calculate the tag weight for docid based on attribute_str.
 #return {tagid, weight}
-def calTagWeight(docs_dict, docid, attribute_str):
+def calTagWeight(docs_dict, docid, attribute_str, feature_name = 'tag'):
     doc_tag_list = list(docs_dict[docid])
     tag_list = {}
-    #remove tag_id which is nan
-    doc_tag_list = [x for x in doc_tag_list if not math.isnan(x['tagid'])]
-    # for tag_TS in doc_tag_list:
-    #     tag_id = tag_TS['tagid']
-    #     if math.isnan(tag_id):
-    #         doc_tag_list.remove(tag_TS)
-    if len(doc_tag_list) == 0:
-        return {}
+    if feature_name == 'actor':
+        # remove tag_id which is nan
+        doc_tag_list = [x for x in doc_tag_list if not math.isnan(x['actorid'])]
+        if len(doc_tag_list) == 0:
+            return {}
+        # sort the tag by TS in decending order
+        doc_tag_list.sort(key=lambda tup: tup[attribute_str], reverse=True)
+        max_attri = 0
+        min_attri = 0
+        if attribute_str == 'actor_movie_rank':
+            min_attri = doc_tag_list[len(doc_tag_list) - 1][attribute_str]
+        for tag_TS in doc_tag_list:
+            tag_id = tag_TS['actorid']
+            if not tag_id in tag_list:
+                tag_list[tag_id] = 0
+            sub = 0
+            if attribute_str == 'timestamp':
+                sub = (timeToNumber(tag_TS[attribute_str]) - min_attri)
+            else:
+                sub = tag_TS[attribute_str] - min_attri
+            if sub == 0:
+                sub = 0.000001
+            tag_list[tag_id] += sub
+        #normalization
+        tag_list = normalize_tag_weight(tag_list)
 
-    #sort the tag by TS in decending order
-    doc_tag_list.sort(key=lambda tup: tup[attribute_str], reverse=True)
-    max_attri = 0
-    min_attri = 0
-    if attribute_str == 'timestamp':
-        min_attri = timeToNumber(doc_tag_list[len(doc_tag_list)-1][attribute_str])
-    else:
-        min_attri = doc_tag_list[len(doc_tag_list) - 1][attribute_str]
-    for tag_TS in doc_tag_list:
-        tag_id = tag_TS['tagid']
-        if not tag_id in tag_list:
-            tag_list[tag_id] = 0
-        sub = 0
+    elif feature_name == 'tag':
+        #remove tag_id which is nan
+        doc_tag_list = [x for x in doc_tag_list if not math.isnan(x['tagid'])]
+        # for tag_TS in doc_tag_list:
+        #     tag_id = tag_TS['tagid']
+        #     if math.isnan(tag_id):
+        #         doc_tag_list.remove(tag_TS)
+        if len(doc_tag_list) == 0:
+            return {}
+
+        #sort the tag by TS in decending order
+        doc_tag_list.sort(key=lambda tup: tup[attribute_str], reverse=True)
+        max_attri = 0
+        min_attri = 0
         if attribute_str == 'timestamp':
-            sub = (timeToNumber(tag_TS[attribute_str]) - min_attri)
+            min_attri = timeToNumber(doc_tag_list[len(doc_tag_list)-1][attribute_str])
         else:
-            sub = tag_TS[attribute_str] - min_attri
-        if sub == 0:
-            sub = 0.000001
-        tag_list[tag_id] += sub
-    #normalization
-    tag_list = normalize_tag_weight(tag_list)
+            min_attri = doc_tag_list[len(doc_tag_list) - 1][attribute_str]
+        for tag_TS in doc_tag_list:
+            tag_id = tag_TS['tagid']
+            if not tag_id in tag_list:
+                tag_list[tag_id] = 0
+            sub = 0
+            if attribute_str == 'timestamp':
+                sub = (timeToNumber(tag_TS[attribute_str]) - min_attri)
+            else:
+                sub = tag_TS[attribute_str] - min_attri
+            if sub == 0:
+                sub = 0.000001
+            tag_list[tag_id] += sub
+        #normalization
+        tag_list = normalize_tag_weight(tag_list)
     return tag_list
+
+
+#input  dict    docs_dict   {docid : [attributes]}
+#       int     docid
+#       str     attribute_str
+#calculate the tag weight for docid based on attribute_str.
+#return {tagid, weight}
+def calFeatureWeight(docs_dict, docid, attribute_str, feature_name = 'tag'):
+    doc_tag_list = list(docs_dict[docid])
+    tag_list = {}
+    if feature_name == 'actor':
+        # remove tag_id which is nan
+        doc_tag_list = [x for x in doc_tag_list if not math.isnan(x['actorid'])]
+        if len(doc_tag_list) == 0:
+            return {}
+        # sort the actor_rank by TS in acending order
+        doc_tag_list.sort(key=lambda tup: tup[attribute_str])
+        max_attri = 0
+        min_attri = 0
+        if attribute_str == 'actor_movie_rank':
+            min_attri = doc_tag_list[len(doc_tag_list) - 1][attribute_str]
+        for tag_TS in doc_tag_list:
+            tag_id = tag_TS['actorid']
+            if not tag_id in tag_list:
+                tag_list[tag_id] = 0
+            sub = 0
+            if attribute_str == 'timestamp':
+                sub = (timeToNumber(tag_TS[attribute_str]) - min_attri)
+            else:
+                sub = tag_TS[attribute_str] - min_attri
+            if sub == 0:
+                sub = 0.000001
+            tag_list[tag_id] += sub
+        #normalization
+        tag_list = normalize_tag_weight(tag_list)
+
+    elif feature_name == 'tag':
+        #remove tag_id which is nan
+        doc_tag_list = [x for x in doc_tag_list if not math.isnan(x['tagid'])]
+        # for tag_TS in doc_tag_list:
+        #     tag_id = tag_TS['tagid']
+        #     if math.isnan(tag_id):
+        #         doc_tag_list.remove(tag_TS)
+        if len(doc_tag_list) == 0:
+            return {}
+
+        #sort the tag by TS in decending order
+        doc_tag_list.sort(key=lambda tup: tup[attribute_str], reverse=True)
+        max_attri = 0
+        min_attri = 0
+        if attribute_str == 'timestamp':
+            min_attri = timeToNumber(doc_tag_list[len(doc_tag_list)-1][attribute_str])
+        else:
+            min_attri = doc_tag_list[len(doc_tag_list) - 1][attribute_str]
+        for tag_TS in doc_tag_list:
+            tag_id = tag_TS['tagid']
+            if not tag_id in tag_list:
+                tag_list[tag_id] = 0
+            sub = 0
+            if attribute_str == 'timestamp':
+                sub = (timeToNumber(tag_TS[attribute_str]) - min_attri)
+            else:
+                sub = tag_TS[attribute_str] - min_attri
+            if sub == 0:
+                sub = 0.000001
+            tag_list[tag_id] += sub
+        #normalization
+        tag_list = normalize_tag_weight(tag_list)
+    return tag_list
+
 
 
 def normalize_tag_weight(tag_list):
@@ -190,7 +287,7 @@ def getMoiveTag(movieid_dict, tagid_dict, timestamp_dict):
 
 
 #return tags {tagid:count of docs which contains tagid
-def prepForIDF(doc_tag_dict):
+def prepForIDF(doc_tag_dict, feature_name = 'tag'):
     tags = {}
     documents = {}
     for doc_id in doc_tag_dict:
@@ -198,7 +295,7 @@ def prepForIDF(doc_tag_dict):
             documents[doc_id] = {}
         tagList = doc_tag_dict[doc_id]
         for tag_attr in tagList:
-            tag_id = tag_attr['tagid']
+            tag_id = tag_attr[feature_name+'id']
             if math.isnan(tag_id):
                 continue
             if not tag_id in documents[doc_id]:
@@ -290,10 +387,13 @@ def buildTagNameDict(genome_tags):
     return tag_name_dict
 
 
-def calFullIDF(doc_tag_dict):
-    tags, documents = prepForIDF(doc_tag_dict)
+def calFullIDF(doc_tag_dict, feature_name='tag'):
+    tags, documents = prepForIDF(doc_tag_dict, feature_name=feature_name)
     return getIDFList(documents, tags)
 
+def calFeatureIDF(doc_tag_dict, feature_name='tag'):
+    tags, documents = prepForIDF(doc_tag_dict, feature_name=feature_name)
+    return getIDFList(documents, tags)
 
 #return doc_tag_idf{tagid:idf}   all the tags appear in all the docs
 def calDocFullIDF(doc_tag_dict, docname):
@@ -315,6 +415,18 @@ def getDocTagsById(doc_tag_dict, docid):
         if not tagid in res:
             res[tagid] = 0
         res[tagid] += 1
+    return res
+
+#return res {feature_id, count}
+def getDocFeaturesById(doc_tag_dict, docid, feature_name):
+    res = {}
+    for item in doc_tag_dict[docid]:
+        featureid = item[feature_name+'id']
+        if math.isnan(featureid):
+            continue
+        if not featureid in res:
+            res[featureid] = 0
+        res[featureid] += 1
     return res
 
 
@@ -340,6 +452,20 @@ def calDocTagTF(doc_tag_dict, docid, isactor = False):
         return normalize_tag_weight(actor_tag_tf_dict)
     return normalize_tag_weight(tag_weight_TS_dict)
 
+def calDocFeatureTF(doc_feature_dict, docid, isactor = False, feature_name = 'tag'):
+    feature_weight_TS_dict = {}
+    if feature_name == 'tag':
+        feature_weight_TS_dict = calTagWeight(doc_feature_dict, docid, 'timestamp')
+        if isactor:
+            tag_weight_rank_dict =calTagWeight(doc_feature_dict, docid, 'actor_movie_rank')
+            actor_tag_tf_dict = {}
+            for tagid in feature_weight_TS_dict.keys():
+                actor_tag_tf_dict[tagid] = feature_weight_TS_dict[tagid] + tag_weight_rank_dict[tagid]
+            return normalize_tag_weight(actor_tag_tf_dict)
+    elif feature_name == 'actor':
+        feature_weight_TS_dict = calFeatureWeight(doc_feature_dict, docid, 'actor_movie_rank', feature_name = 'actor')
+    return normalize_tag_weight(feature_weight_TS_dict)
+
 def calDocTFIDF(doc_tag_dict, docid, docname, movie = False):
     tag_weight_dict = calDocTagTF(doc_tag_dict, docid)
     tags = getDocTagsById(doc_tag_dict, docid)
@@ -357,3 +483,13 @@ def calDocTFIDF(doc_tag_dict, docid, docname, movie = False, movie_tag_dict = No
     else:
         doc_tag_idf = calDocFullIDF(doc_tag_dict, docname)
     return computeIFIDF(tags,tag_weight_dict, doc_tag_idf )
+
+def calDocFeatureTFIDF(doc_feature_dict, docid, docname, feature_name = 'tag', movie = False, movie_tag_dict = None):
+
+    feature_weight_dict = calDocFeatureTF(doc_feature_dict, docid, feature_name = feature_name)
+    features = getDocFeaturesById(doc_feature_dict, docid, feature_name)
+    if movie:
+        doc_tag_idf = calDocFullIDF(movie_tag_dict, docname)
+    else:
+        doc_tag_idf = calFeatureIDF(doc_feature_dict, feature_name = feature_name)
+    return computeIFIDF(features,feature_weight_dict, doc_tag_idf )

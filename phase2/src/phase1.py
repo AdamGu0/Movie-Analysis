@@ -1,12 +1,12 @@
 import pandas as pd
-import phase1util as putil
+import src.phase1util as putil
 import fileinput
 from pathlib import Path
 import sys
-import actor
-import genre
-import user
-import differentiate_genre
+import src.actor as actor
+import src.genre as genre
+import src.user as user
+import src.differentiate_genre as differentiate_genre
 movie_actor = pd.read_csv("phase1_dataset/movie-actor.csv")
 genome_tags = pd.read_csv("phase1_dataset/genome-tags.csv")
 mltags = pd.read_csv("phase1_dataset/mltags.csv")

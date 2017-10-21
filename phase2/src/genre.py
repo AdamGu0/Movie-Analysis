@@ -1,4 +1,4 @@
-import phase1util as putil
+import src.phase1util as putil
 import pandas as pd
 from pathlib import Path
 import numpy as np
@@ -23,7 +23,7 @@ def printGenre(genres_movie, mltags,  tag_name_dict, genreid,model):
         res = putil.calDocTFIDF(genre_tag_dict, genreid, 'genre')
     putil.print_result(model, 'genre', genreid, tag_name_dict, res)
 
-#return actor_tag_dict = {actorid:[{"tagid":, "timestamp":}}
+#return genres_tag_dict = {genreid:[{"tagid":, "timestamp":}}
 def prepareData(genres_movie, mltags):
     outter_join = genres_movie.join(mltags.set_index("movieid"), how="outer", on='movieid')
     outter_join = outter_join.drop('userid', 1)
