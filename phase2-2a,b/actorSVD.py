@@ -8,10 +8,12 @@ from sklearn.cluster import KMeans
 def main():
     getMltags()
     getActorInfo()
+
     print 'task 2a:'
     m = actorTagMatrix()
     simMat = m * m.T
     svd(simMat)
+
     print 'task 2b:'
     svd(coActorMatrix())
 
@@ -118,7 +120,7 @@ def getMovieActor():
     global movieActor  # key:movieID, value:{actorID:weight, ...}
 
     if len(movieActor) == 0:
-        with open('Phase2_data/movie-actor.csv', 'rb') as csvfile:
+        with open('../Phase2_data/movie-actor.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile)
             reader.next()  # ignore the title row
             for movie, actor, rank in reader:
@@ -139,7 +141,7 @@ def getMltags():
         data = []
         maxTime = 0.0
         minTime = time.time()
-        with open('Phase2_data/mltags.csv', 'rb') as csvfile:
+        with open('../Phase2_data/mltags.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile)
             reader.next()  # ignore the title row
             for row in reader:
@@ -168,7 +170,7 @@ def getMovieGenre():
     global movieGenre  # key:movieID, value:[genre, ...]
 
     if len(movieGenre) == 0:
-        with open('Phase2_data/mlmovies.csv', 'rb') as csvfile:
+        with open('../Phase2_data/mlmovies.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile)
             reader.next()  # ignore the title row
             for movie, name, genres in reader:
@@ -184,7 +186,7 @@ def getGenomeTags():
     global genomeTags
 
     if len(genomeTags) == 0:
-        with open('Phase2_data/genome-tags.csv', 'rb') as csvfile:
+        with open('../Phase2_data/genome-tags.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile)
             reader.next()  # ignore the title row
             for row in reader:
@@ -198,7 +200,7 @@ def getMlratings():
 
     if len(mlratings) == 0:
         data = []
-        with open('Phase2_data/mlratings.csv', 'rb') as csvfile:
+        with open('../Phase2_data/mlratings.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile)
             reader.next()  # ignore the title row
             for row in reader:
@@ -214,7 +216,7 @@ def getActorInfo():
     global actorInfo, actorIndex
 
     if len(actorInfo) == 0:
-        with open('Phase2_data/imdb-actor-info.csv', 'rb') as csvfile:
+        with open('../Phase2_data/imdb-actor-info.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile)
             reader.next()  # ignore the title row
             for actor, name, gender in reader:
