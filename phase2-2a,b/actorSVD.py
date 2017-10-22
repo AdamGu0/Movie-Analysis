@@ -9,14 +9,15 @@ def main():
     getMltags()
     getActorInfo()
     print 'task 2a:'
-    actorSvd(actorTagMatrix())
+    m = actorTagMatrix()
+    simMat = m * m.T
+    svd(simMat)
     print 'task 2b:'
-    actorSvd(coActorMatrix())
+    svd(coActorMatrix())
 
 
-def actorSvd(martix):
-    simMat = martix * martix.T
-    U, sigma, V = numpy.linalg.svd(simMat)
+def svd(martix):
+    U, sigma, V = numpy.linalg.svd(martix)
     U = U[:, 0:3]
     sigma = sigma[0:3]
     print 'actors\' degrees of memberships to top-3 latent semantics:\n', U
