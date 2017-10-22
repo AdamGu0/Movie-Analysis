@@ -222,3 +222,21 @@ def actor_coact_calculator(actor_id, all_actor_id):
 
     return actor_num_list
 # ----- End of Actor - CoActMovieNum -----
+
+
+# Rescale PR Vector
+# Normalize to range [0, 1]
+def pr_vector_rescale(pr_list):
+    # Return list, in range of 0 to 1
+    rescaled_list = []
+
+    # Max PR Score and Min PR Score
+    max_pr = max(pr_list)
+    min_pr = min(pr_list)
+
+    for pr in pr_list:
+        norm_pr = (pr - min_pr) / (max_pr - min_pr)
+        rescaled_list.append(norm_pr)
+
+    return rescaled_list
+# ----- End of PR Vector Rescaling -----
