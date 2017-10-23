@@ -6,7 +6,8 @@ import math
 from datetime import datetime
 
 import t2c 
-import t2d 
+import t2d
+import actorSVD as t2ab 
 
 
 
@@ -26,8 +27,11 @@ def main():
             print("invalid input")  
             
     
-        
-        if task=="task2c":
+        if task=="task2a":
+            t2ab.do_t2a()
+        elif task=="task2b":
+            t2ab.do_t2b()
+        elif task=="task2c":
             t2c.do_t2c()
         elif task=="task2d":
             t2d.do_t2d()
