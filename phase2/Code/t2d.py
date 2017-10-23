@@ -197,7 +197,7 @@ def do_t2d():
     print("-------------------------------")
     print(">Report the latent semantics in decreasing order:")
     for k in range(0,tr):
-        print("topic"+str(topic_weights[k][0]))
+        print("topic"+str(topic_weights[k][0])+"  "+str(topic_weights[k][1]))
     print("-------------------------------")
     
     #partition into 5 groups
