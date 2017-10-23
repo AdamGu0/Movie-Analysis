@@ -9,12 +9,12 @@ def main():
     getMltags()
     getActorInfo()
 
-    print 'task 2a:'
+    print('task 2a:')
     m = actorTagMatrix()
     simMat = m * m.T
     svd(simMat)
 
-    print 'task 2b:'
+    print('task 2b:')
     svd(coActorMatrix())
 
 
@@ -22,22 +22,22 @@ def svd(martix):
     U, sigma, V = numpy.linalg.svd(martix)
     U = U[:, 0:3]
     sigma = sigma[0:3]
-    print 'actors\' degrees of memberships to top-3 latent semantics:\n', U
-    print '\nImportance of top 3 latent semantics:\n', sigma
+    print('actors\' degrees of memberships to top-3 latent semantics:\n', U)
+    print('\nImportance of top 3 latent semantics:\n', sigma)
 
     estimator = KMeans(n_clusters=3)
     group = estimator.fit_predict(U)
 
-    print '\nGroup labels for actors:\n'
+    print('\nGroup labels for actors:\n')
     actorInfo = getActorInfo()
     groupInfo = ['', '', '']
     for actor in actorInfo:
         i = actorIndex[actor]
         groupInfo[group[i]] += actorInfo[actor][0] + '\n'
 
-    print 'Group 1:\n', groupInfo[0]
-    print 'Group 2:\n', groupInfo[1]
-    print 'Group 3:\n', groupInfo[2]
+    print('Group 1:\n', groupInfo[0])
+    print('Group 2:\n', groupInfo[1])
+    print('Group 3:\n', groupInfo[2])
 
 
 def actorTagMatrix():
@@ -80,7 +80,7 @@ def coActorMatrix():
     movieActor = getMovieActor()
     for movie in movieActor:
         actors = movieActor[movie]
-        for actor1 in actors.keys():
+        for actor1 in list(actors.keys()):
             i = actorIndex[actor1]
             weight1 = actors.pop(actor1)
             coActorVectors[i][i] += 0.5 * weight1 ** 2
@@ -120,9 +120,9 @@ def getMovieActor():
     global movieActor  # key:movieID, value:{actorID:weight, ...}
 
     if len(movieActor) == 0:
-        with open('../Phase2_data/movie-actor.csv', 'rb') as csvfile:
+        with open('../Phase2_data/movie-actor.csv') as csvfile:
             reader = csv.reader(csvfile)
-            reader.next()  # ignore the title row
+            next(reader)  # ignore the title row
             for movie, actor, rank in reader:
                 movie = int(movie)
                 actors = movieActor.get(movie, {})
@@ -141,9 +141,9 @@ def getMltags():
         data = []
         maxTime = 0.0
         minTime = time.time()
-        with open('../Phase2_data/mltags.csv', 'rb') as csvfile:
+        with open('../Phase2_data/mltags.csv') as csvfile:
             reader = csv.reader(csvfile)
-            reader.next()  # ignore the title row
+            next(reader)  # ignore the title row
             for row in reader:
                 user = int(row[0])
                 tag = int(row[2])
@@ -170,9 +170,9 @@ def getMovieGenre():
     global movieGenre  # key:movieID, value:[genre, ...]
 
     if len(movieGenre) == 0:
-        with open('../Phase2_data/mlmovies.csv', 'rb') as csvfile:
+        with open('../Phase2_data/mlmovies.csv') as csvfile:
             reader = csv.reader(csvfile)
-            reader.next()  # ignore the title row
+            next(reader)  # ignore the title row
             for movie, name, genres in reader:
                 movie = int(movie)
                 genres = set(genres.split('|'))
@@ -186,9 +186,9 @@ def getGenomeTags():
     global genomeTags
 
     if len(genomeTags) == 0:
-        with open('../Phase2_data/genome-tags.csv', 'rb') as csvfile:
+        with open('../Phase2_data/genome-tags.csv') as csvfile:
             reader = csv.reader(csvfile)
-            reader.next()  # ignore the title row
+            next(reader)  # ignore the title row
             for row in reader:
                 genomeTags[int(row[0])] = row[1]
 
@@ -200,9 +200,9 @@ def getMlratings():
 
     if len(mlratings) == 0:
         data = []
-        with open('../Phase2_data/mlratings.csv', 'rb') as csvfile:
+        with open('../Phase2_data/mlratings.csv') as csvfile:
             reader = csv.reader(csvfile)
-            reader.next()  # ignore the title row
+            next(reader)  # ignore the title row
             for row in reader:
                 user = int(row[1])
                 data.append((int(row[0]), user))
@@ -216,9 +216,9 @@ def getActorInfo():
     global actorInfo, actorIndex
 
     if len(actorInfo) == 0:
-        with open('../Phase2_data/imdb-actor-info.csv', 'rb') as csvfile:
+        with open('../Phase2_data/imdb-actor-info.csv') as csvfile:
             reader = csv.reader(csvfile)
-            reader.next()  # ignore the title row
+            next(reader)  # ignore the title row
             for actor, name, gender in reader:
                 actorInfo[int(actor)] = (name, gender)
                 actorIndex[int(actor)] = len(actorIndex)
