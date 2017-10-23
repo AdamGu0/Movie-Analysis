@@ -28,14 +28,10 @@ def personalized_page_rank(seeds, trans_2d_list, alpha=0.9):
             seed_list.append([0])
 
     # PR vector (N * 1)
-    # Assumption - Initial Values in PR Vector are ALL 1/N
-    pr_list = []
-    for i in range(0, row_num):
-        pr_list.append([1/col_num])
-
+    # Assumption - Initial PR Vector is the Seed Vector
     # Transform to Lists to Matrix
     seed_vector = np.matrix(seed_list)
-    pr_vector = np.matrix(pr_list)
+    pr_vector = np.matrix(seed_list)
     trans_matrix = np.matrix(trans_2d_list)
 
     # Calculate PR Vector with Formula Iteratively

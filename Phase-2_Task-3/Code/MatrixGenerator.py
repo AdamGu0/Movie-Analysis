@@ -14,7 +14,7 @@ def actor_actor_matrix():
     # csv files
     file_a = os.path.join(os.pardir, "Phase2_data/imdb-actor-info.csv")
     file_b = os.path.join(os.pardir, "Phase2_data/genome-tags.csv")
-    file_out = os.path.join(os.pardir, "Outputs/Actor-Actor-Similarity.csv")
+    file_out = os.path.join(os.pardir, "Outputs/Task-3-Actor-Actor-Similarity.csv")
 
     # Creating Actor(Objects)-Tag(Features) Matrix
     # Actor IDs
@@ -75,7 +75,7 @@ def actor_actor_matrix():
 def coactor_coactor_matrix():
     # csv files
     file_a = os.path.join(os.pardir, "Phase2_data/imdb-actor-info.csv")
-    file_out = os.path.join(os.pardir, "Outputs/CoActor-CoActor-Matrix.csv")
+    file_out = os.path.join(os.pardir, "Outputs/Task-3-CoActor-CoActor-Matrix.csv")
 
     # Actor IDs
     all_actor_id = []
