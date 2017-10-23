@@ -235,8 +235,38 @@ def pr_vector_rescale(pr_list):
     min_pr = min(pr_list)
 
     for pr in pr_list:
-        norm_pr = (pr - min_pr) / (max_pr - min_pr)
+        norm_pr = (pr[0] - min_pr[0]) / (max_pr[0] - min_pr[0])
         rescaled_list.append(norm_pr)
 
     return rescaled_list
 # ----- End of PR Vector Rescaling -----
+
+
+# Movie-Tag Calculator
+def movie_tag_calculator(movie_id, user_tag_id):
+    # Movie and Tag are linked within mltags file
+    file_tag = os.path.join(os.pardir, "Phase2_data/mltags.csv")
+
+    # Result list
+    result_list = []
+    # Tag list of the given movie_id
+    tag_list = []
+
+    # Find all tags related to the given movie_id
+    with open(file_tag, 'r') as f:
+        reader = csv.reader(f)
+
+        for row in reader:
+            if row[1] == movie_id:
+                tag_list.append(row[2])
+    # End of File processing
+
+    # Generate resulting tag vector for each movie
+    for i in range(0, len(user_tag_id)):
+        if user_tag_id[i] in tag_list:
+            result_list.append(1)
+        else:
+            result_list.append(0)
+
+    return result_list
+# -- End of Movie-Tag Calculator

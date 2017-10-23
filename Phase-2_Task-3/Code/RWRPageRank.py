@@ -12,7 +12,7 @@ ITERATION_TIME = 15
 # @Param seeds - Seed set, List of Seeds' Position (Col Num in Transition Matrix)
 # @Param trans_2d_list - Transition Matrix in the form of 2D List
 # @Param alpha - Probability of Random Walk to Neighbors, Between 0 and 1
-def rwr_page_rank(seeds, trans_2d_list, alpha):
+def rwr_page_rank(seeds, trans_2d_list, alpha=0.9):
     # Row Number and Col Number in Transition Matrix
     row_num = len(trans_2d_list)
     col_num = len(trans_2d_list[0])
@@ -20,7 +20,7 @@ def rwr_page_rank(seeds, trans_2d_list, alpha):
     # RWR PR Result, N * 1 Matrix, Initialized with ALL 0
     pr_result = []
     for i in range(0, row_num):
-        pr_result.append([0])
+        pr_result.append([0.0])
     pr_result_vector = np.matrix(pr_result)
 
     # RWR for Each Seed

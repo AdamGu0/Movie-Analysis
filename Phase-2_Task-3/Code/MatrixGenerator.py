@@ -2,6 +2,7 @@
 # 1. Actor - Actor Similarity Matrix
 # 2. CoActor - CoActor Matrix
 # 3. Transition Matrix
+# 4. Movie - Movie Similarity Matrix (Task 4)
 
 import numpy as np
 import os
@@ -167,3 +168,67 @@ def transition_matrix(input_matrix):
     # Return Transition Matrix
     return result_matrix
 # ----- End of Transition Matrix Generation -----
+
+
+def movie_movie_matrix(user_id):
+    # csv files
+    file_a = os.path.join(os.pardir, "Phase2_data/mltags.csv")
+    file_b = os.path.join(os.pardir, "Phase2_data/mlratings.csv")
+    file_c = os.path.join(os.pardir, "Phase2_data/mlmovies.csv")
+
+    # Creating Movie(Objects)-Tag(Features) Matrix
+    # Tags are from the movies that the given user watched
+    # All Movie IDs
+    all_movie_id = []
+    # Movie IDs related to the given User
+    user_movie_id = []
+    # Tag IDs related to the Movies watched by given User
+    user_tag_id = []
+    # Get all movie IDs
+    with open(file_c, 'r') as fc:
+        reader_c = csv.reader(fc)
+        next(reader_c, None)
+
+        for row in reader_c:
+            all_movie_id.append(row[0])
+    # Get movie IDs related to given User, then get related Tags
+    with open(file_a, 'r') as fa, open(file_b, 'r') as fb:
+        reader_a = csv.reader(fa)
+        reader_b = csv.reader(fb)
+        # Skip the headers
+        next(reader_a, None)
+        next(reader_b, None)
+
+        for row in reader_a:
+            if row[0] == user_id:
+                user_movie_id.append(row[1])
+
+        for row in reader_b:
+            if row[1] == user_id and row[0] not in user_movie_id:
+                user_movie_id.append(row[0])
+
+        # Get Tags related to the Movies which the User watched
+        fa.seek(0)
+        for row in reader_a:
+            if row[1] in user_movie_id and row[2] not in user_tag_id:
+                user_tag_id.append(row[2])
+
+    # End of Getting ActorIDs and TagIDs
+
+    # Movie-TagVector 2-D List
+    # Row - MovieIDs, same order(index) with all_movie_id list
+    # Column - TagIDs, same order(index) with user_tag_id list
+    # Values - Tag Weights
+    movie_tag_list = []
+
+    # Get the Tag Vector for each Movie
+    for movie_id in all_movie_id:
+        movie_tag_list.append(hpF.movie_tag_calculator(movie_id, user_tag_id))
+
+    # Make the 2D List to Matrix, and get its Transpose
+    matrix = np.matrix(movie_tag_list)
+    matrix_t = matrix.getT()
+    similarity_list = (matrix.dot(matrix_t)).tolist()
+
+    return similarity_list
+# ------ End of Actor-Actor Matrix ------
