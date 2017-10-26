@@ -231,4 +231,4 @@ def movie_movie_matrix(user_id):
     similarity_list = (matrix.dot(matrix_t)).tolist()
 
     return similarity_list
-# ------ End of Actor-Actor Matrix ------
+# ------ End of Movie-Movie Matrix ------

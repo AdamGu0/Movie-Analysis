@@ -184,7 +184,7 @@ def task_4(user_id, alpha):
             seed_index_list.append(j)
 
     # Get Movie-Movie Similarity Matrix
-    mm_matrix = matrixG.coactor_coactor_matrix()
+    mm_matrix = matrixG.movie_movie_matrix(user_id)
 
     # Get transition matrix
     trans_list = matrixG.transition_matrix(mm_matrix)

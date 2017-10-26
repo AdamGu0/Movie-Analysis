@@ -234,6 +234,9 @@ def pr_vector_rescale(pr_list):
     max_pr = max(pr_list)
     min_pr = min(pr_list)
 
+    if max_pr == min_pr:
+        return pr_list
+
     for pr in pr_list:
         norm_pr = (pr[0] - min_pr[0]) / (max_pr[0] - min_pr[0])
         rescaled_list.append(norm_pr)
